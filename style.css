@@ -122,3 +122,97 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* =================================== */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.6rem;
+}
+
+.body-wrap {
+    width: min(98vw, 1200px);
+    margin: auto;
+}
+/* =================== 
+{
+    filterBlock: `filterzy-block`,
+    filterTitle: `filterzy-title`,
+    filterLabel: `filterzy-label`,
+    filterSubmitButton: `filterzy-submit-btn`,
+    filterCancelButton: `filterzy-cancel-btn`,
+    filterRequired: `filterzy-required`,
+},
+
+    quizBlock: `quizzy-block`,
+    quizImg: `quizzy-img`,
+    quizQuestion: `quizzy-question`,
+    quizUserAnswer: `quizzy-userAnswer`,
+    quizCorrectAnswer: `quizzy-correctAnswer`,
+    quizAnswers: `quizzy-answers`,
+    quizAnswer: `quizzy-answer`,
+    quizDelete: `quizzy-delete`,
+    quizSubmit: `quizzy-submit`,
+*/
+
+.filterzy,
+.quizBoard {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.filterzy-block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.filterzy-title {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.filterzy-label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0.5;
+}
+
+.filterzy-label:has(:checked) {
+    border-color: rgb(102, 155, 102);
+    color: rgb(84, 160, 84);
+    opacity: 1;
+    box-shadow: 0 0 1px 1px;
+}
+
+.filterzy-submit-btn,
+.filterzy-cancel-btn {
+    background-color: transparent;
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* .filterzy-submit-btn:hover,
+.filterzy-cancel-btn:hover {
+    border-color: black;
+} */

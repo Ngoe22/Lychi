@@ -4,7 +4,7 @@ const filterForm = [
         title: `Pham vi tu vung `,
         name: `lesson`,
         value: [`1`, `2`, `3`],
-        valueShow: [`bai 1`, `bai 2`, `bai 3`],
+        valueShow: [`1`, `2`, `3`],
         required: true,
     },
     {
@@ -59,7 +59,7 @@ const lychiFilter = new Filterzy(
     })
 );
 
-const lychiQuiz = new Quizzy(`#quiz`, function (output) {
+const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
     console.log(output);
     lychiQuiz.SubmitBtn.hidden = true;
     showResultsScore.innerHTML = `${output.passed} / ${output.total} `;

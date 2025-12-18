@@ -75,7 +75,7 @@ Filterzy.prototype._render = function (initArray) {
                 parentNode: block,
                 htmlTag: `label`,
                 setAttribute: { class: this.classNames.filterLabel },
-                html: `<input  type="${data.inputType}" name="${data.name}" value="${innerValue}" /> ${data.valueShow[index]}`,
+                html: `<input hidden  type="${data.inputType}" name="${data.name}" value="${innerValue}" /> ${data.valueShow[index]}`,
             });
 
             if (data.radioDefault === innerValue) {
