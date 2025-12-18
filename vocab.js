@@ -1579,7 +1579,7 @@ const katakanaVocab = [
     {
         level: `N5`,
         lesson: `2`,
-        vn: `sốcôla`,
+        vn: `sôcôla`,
         kata: `チョコレート`,
         imgUrl: ``,
         kind: `noun`, // danh từ

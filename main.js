@@ -77,17 +77,17 @@ function setResultsMessages(results) {
     console.log(rate);
 
     if (rate === 1) {
-        showResultsMessages.innerText = `👑 vua tieng nhat , ke thong tri JLPT , lanh chua tu vung  Xứ Phù Tang `;
+        showResultsMessages.innerText = ` vua tieng nhat , ke thong tri JLPT , lanh chua tu vung  Xứ Phù Tang `;
         return;
     }
     if (rate === 0) {
-        showResultsMessages.innerText = `😭 ban an nham a `;
+        showResultsMessages.innerText = ` ban an nham a `;
     } else if (rate < 0.5) {
-        showResultsMessages.innerText = `💎 khong co viec gi kho ,  chi so long khong ben `;
+        showResultsMessages.innerText = ` khong co viec gi kho ,  chi so long khong ben `;
     } else if (rate < 0.75) {
-        showResultsMessages.innerText = `💐 len`;
+        showResultsMessages.innerText = ` len`;
     } else {
-        showResultsMessages.innerText = `😍 tuyet voi , hay co gang duy tri  `;
+        showResultsMessages.innerText = ` tuyet voi , hay co gang duy tri  `;
     }
 }
 
@@ -102,6 +102,7 @@ showResultsClear.onclick = function () {
     lychiFilter._reset();
     lychiFilter.container.hidden = false;
     showResults.hidden = true;
+    scrollToTopBtn.hidden = true;
 };
 
 const scrollToTopBtn = document.querySelector(`.scrollToHead`);

@@ -22,6 +22,7 @@ const Quizzy = function (selector, onSubmit, classNames = {}) {
     this.userAnswerNodeList = [];
     this.correctAnswerNodeList = [];
     this.deleteNodeList = [];
+    this.currentBlockCheckedNodeList = [];
     // this.output = [];
     this.onSubmit = onSubmit;
 
@@ -65,6 +66,7 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
 
     const blockQty = QA.length;
     for (let i = 0; i < blockQty; i++) {
+        this.currentBlockCheckedNodeList[i] = [];
         // this.output[i] = [];
         const quizBlock = this._addingCHild({
             parent: this.container,
@@ -103,12 +105,18 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
             addClickEvent: (e) => {
                 e.preventDefault();
                 const order = e.target.getAttribute(`data-order`);
-                this.userAnswerNodeList[order].innerText = ``;
-                this.answerOptionsNodeList[order]
-                    .querySelectorAll(`input`)
-                    .forEach(function (value) {
-                        value.checked = false;
-                    });
+                let userA = this.userAnswerNodeList[order];
+
+                userA.innerText = userA.innerText.slice(0, -1);
+
+                this.currentBlockCheckedNodeList[order].pop().checked = false;
+
+                // this.userAnswerNodeList[order].innerText = ``;
+                // this.answerOptionsNodeList[order]
+                //     .querySelectorAll(`input`)
+                //     .forEach(function (value) {
+                //         value.checked = false;
+                //     });
             },
         });
         this.deleteNodeList.push(deleteBtn);
@@ -133,6 +141,7 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
                         // this.output[order] = value;
                         this.userAnswerNodeList[order].innerText = value;
                     }
+                    this.currentBlockCheckedNodeList[i].push(inputTag);
                 }
             },
         });
@@ -215,6 +224,7 @@ Quizzy.prototype._erase = function () {
     this.userAnswerNodeList = [];
     this.correctAnswerNodeList = [];
     this.deleteNodeList = [];
+    this.currentBlockCheckedNodeList = [];
     // this.output = [];
     this.container.innerHTML = "";
 };
