@@ -786,7 +786,7 @@ const hiraganaVocab = [
     {
         level: `N5`,
         lesson: `2`,
-        vn: `sốcôla`,
+        vn: `sôcôla`,
         hv: ``,
         kanji: ``,
         hira: "チョコレート",

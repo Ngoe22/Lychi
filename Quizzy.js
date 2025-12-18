@@ -81,17 +81,19 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
             html: QA[i].question,
         });
 
+        const correctAnswer = this._addingCHild({
+            parent: quizBlock,
+            attribute: {
+                class: this.classNames.quizCorrectAnswer,
+            },
+        });
+        this.correctAnswerNodeList.push(correctAnswer);
+
         const userAnswer = this._addingCHild({
             parent: quizBlock,
             attribute: { class: this.classNames.quizUserAnswer },
         });
         this.userAnswerNodeList.push(userAnswer);
-
-        const correctAnswer = this._addingCHild({
-            parent: quizBlock,
-            attribute: { class: this.classNames.quizCorrectAnswer },
-        });
-        this.correctAnswerNodeList.push(correctAnswer);
 
         const deleteBtn = this._addingCHild({
             parent: quizBlock,
@@ -114,7 +116,7 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
         const answers = this._addingCHild({
             parent: quizBlock,
             attribute: {
-                class: this.classNames.quizAnswer,
+                class: this.classNames.quizAnswers,
             },
             addClickEvent: (e) => {
                 e.preventDefault();
@@ -142,11 +144,11 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
                 tagname: "label",
                 attribute: {
                     "data-order": i,
-                    class: this.classNames.quizAnswers,
+                    class: this.classNames.quizAnswer,
                 },
                 html: `${QA[i].options[m]}
                 <input
-                    
+                    hidden
                     type="${mode}"
                     name="quiz-Q${i}"
                     value="${QA[i].options[m]}"
@@ -188,7 +190,7 @@ Quizzy.prototype._showCorrectAnswer = function () {
 
     this.correctAnswerNodeList.forEach((value, index) => {
         value.innerText = this.QA[index].showAnswer;
-
+        value.classList.add(`show`);
         if (this.userAnswerNodeList[index].innerText === value.innerText) {
             score++;
             this.userAnswerNodeList[index].classList.add(`correct`);
