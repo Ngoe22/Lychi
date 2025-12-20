@@ -108,22 +108,26 @@ const testFilterToQA = new filterToQA();
 // },
 
 let total = 50;
-let [l1, l2, l3] = [12, 33, 45];
+let [l1, l2, l3] = [12, 11, 10];
 
 function share() {
     let r1 = 0;
     let r2 = 0;
     let r3 = 0;
     //
-    let avg = Math.floor(total / 3);
+    let avg = Math.ceil(total / 3);
     while (total > 0) {
+        console.log(`avg`, avg);
+
         r1 += Math.min(l1, avg);
         l1 -= r1;
         r2 += Math.min(l2, avg);
         l2 -= r2;
         r3 += Math.min(l3, avg);
         l3 -= r3;
+
         total = total - r1 - r2 - r3;
+        avg = Math.ceil(total / 3);
     }
 
     console.log(total);
