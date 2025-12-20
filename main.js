@@ -1,15 +1,57 @@
+// ===========================
+
+const allowLessVocabModal = new Popzy({
+    footer: true,
+    content: ` `,
+    closeMethods: ["button"],
+    cssClass: ["lychiModal"],
+    // onClose: function (e) {
+    //     console.log(e);
+    // },
+});
+
+allowLessVocabModal.addFooterButton(
+    "Điều chỉnh",
+    "lychiModal-cancel",
+    function () {
+        allowLessVocabModal.close();
+    }
+);
+
+allowLessVocabModal.addFooterButton("OK", "lychiModal-continue", function () {
+    allowLessVocabModal.close();
+    continueEvenLack = true;
+    lychiFilter.funcs.onSubmit(lychiFilter._getOutput());
+});
+
+const lychiNoteModal = new Popzy({
+    footer: true,
+    templateId: `modalNote-template`,
+    closeMethods: ["overlay", "button", "escape"],
+    cssClass: ["lychiExamNote"],
+    onClose: function () {
+        console.log();
+    },
+});
+
+lychiNoteModal.addFooterButton("OK", "lychiModal-continue", function () {
+    lychiNoteModal.close();
+});
+
+// ====================================================
+
 const filterForm = [
     {
         inputType: `checkbox`,
-        title: `Pham vi tu vung `,
+        title: `Phạm vi bài `,
         name: `lesson`,
-        value: [`1`, `2`, `3`],
-        valueShow: [`1`, `2`, `3`],
+        value: [`lesson1`, `lesson2`, `lesson3`, `lesson4`, `lesson5`],
+        valueShow: [`1`, `2`, `3`, `4`, `5`],
         required: true,
     },
     {
         inputType: `checkbox`,
-        title: `Loai chu `,
+        title: `Kiểu chữ`,
         name: `letter`,
         value: [`hiragana`, `katakana`, `kanji`],
         valueShow: [`hiragana `, `katakana`, `kanji`],
@@ -17,21 +59,22 @@ const filterForm = [
     },
     {
         inputType: `radio`,
-        title: `So luong tu vung `,
+        title: `Số lượng từ vựng`,
         name: `AOQ`,
         value: [`20`, `30`, `50`],
         valueShow: [`20`, `30`, `50`],
         required: true,
     },
-    {
-        inputType: `radio`,
-        title: `Ngon ngu goc`,
-        name: `motherLang`,
-        value: [`vn`, `en`],
-        radioDefault: `vn`,
-        valueShow: [`VN`, `EN`],
-        required: true,
-    },
+
+    // {
+    //     inputType: `radio`,
+    //     title: `Ngôn ngữ`,
+    //     name: `motherLang`,
+    //     value: [`vn`, `en`],
+    //     radioDefault: `vn`,
+    //     valueShow: [`VN`, `EN`],
+    //     required: true,
+    // },
 ];
 
 //
@@ -41,75 +84,48 @@ const lychiFilter = new Filterzy(
     (functions = {
         onSubmit: function (output) {
             //
+            console.log(output);
             if (output) {
-                console.log(output, `Filter Submitted !!!!`);
-                let QAlist = filterToQA(output);
-                lychiQuiz._render(QAlist);
-                // lychiFilter.submitBtn.classList.add(`submitted`);
-                lychiFilter.container.classList.add(`hide`);
-                // lychiFilter._toggleHidden(true);
-                lychiFilter.container.hidden = true;
-            } else {
-                console.log(output, `Filter Fail !!!!`);
+                testFilterToQA.getVocab(output);
             }
         },
         onCancel: function () {
             console.log(`Filter Cancel`);
         },
-    })
+    }),
+    {
+        // filterSubmitButtonHtml: `Làm bài`,
+        // filterCancelButtonHtml: `Chọn lại`,
+    }
 );
 
 const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
-    console.log(output);
-    lychiQuiz.SubmitBtn.hidden = true;
-    showResultsScore.innerHTML = `${output.passed} / ${output.total} `;
-    setResultsMessages(output);
-    scrollToTopBtn.hidden = false;
-    showResults.hidden = false;
-    document.body.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-    });
+    // console.log(output);
+    // lychiQuiz.SubmitBtn.hidden = true;
+    // showResultsScore.innerHTML = `${output.passed} / ${output.total} `;
+    // scrollToTopBtn.hidden = false;
+    // showResults.hidden = false;
+    // document.body.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    // });
 });
 
-function setResultsMessages(results) {
-    let rate = results.passed / results.total;
-    console.log(rate);
+// lychiNoteModal.open();
+// lychiModal.open()
 
-    if (rate === 1) {
-        showResultsMessages.innerText = ` vua tieng nhat , ke thong tri JLPT , lanh chua tu vung  Xứ Phù Tang `;
-        return;
-    }
-    if (rate === 0) {
-        showResultsMessages.innerText = ` ban an nham a `;
-    } else if (rate < 0.5) {
-        showResultsMessages.innerText = ` khong co viec gi kho ,  chi so long khong ben `;
-    } else if (rate < 0.75) {
-        showResultsMessages.innerText = ` len`;
-    } else {
-        showResultsMessages.innerText = ` tuyet voi , hay co gang duy tri  `;
-    }
-}
-
-const showResults = document.querySelector(`.show-results`);
-showResults.hidden = true;
-
-const showResultsScore = document.querySelector(`.show-results__score`);
-const showResultsMessages = document.querySelector(`.show-results__messages`);
-const showResultsClear = showResults.querySelector(`.show-results__clear`);
-showResultsClear.onclick = function () {
-    lychiQuiz._erase();
-    lychiFilter._reset();
-    lychiFilter.container.hidden = false;
-    showResults.hidden = true;
-    scrollToTopBtn.hidden = true;
-};
+// =================================================
+//  PAGE
 
 const scrollToTopBtn = document.querySelector(`.scrollToHead`);
-scrollToTopBtn.hidden = true;
+// scrollToTopBtn.hidden = true;
 scrollToTopBtn.onclick = function () {
     document.body.scrollIntoView({
         behavior: "smooth",
         block: "start",
     });
 };
+
+// lychiFilter._destroy();
+// lychiFilter._render(filterForm2);
+// xu ly language

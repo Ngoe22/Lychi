@@ -10,6 +10,8 @@ const Filterzy = function (selector, initArray, funcs = {}, classNames = {}) {
             filterSubmitButton: `filterzy-submit-btn`,
             filterCancelButton: `filterzy-cancel-btn`,
             filterRequired: `filterzy-required`,
+            filterSubmitButtonHtml: `Submit`,
+            filterCancelButtonHtml: `Cancel`,
         },
         classNames
     );
@@ -91,7 +93,7 @@ Filterzy.prototype._render = function (initArray) {
         parentNode: this.container,
         htmlTag: `button`,
         setAttribute: { class: this.classNames.filterCancelButton },
-        html: `Cancel`,
+        html: this.classNames.filterCancelButtonHtml,
         addClickEvent: (e) => {
             e.preventDefault();
             this._reset();
@@ -103,7 +105,7 @@ Filterzy.prototype._render = function (initArray) {
         parentNode: this.container,
         htmlTag: `button`,
         setAttribute: { class: this.classNames.filterSubmitButton },
-        html: `Submit`,
+        html: this.classNames.filterSubmitButtonHtml,
         addClickEvent: (e) => {
             e.preventDefault();
             this.funcs.onSubmit(this._getOutput());
@@ -129,21 +131,18 @@ Filterzy.prototype._getOutput = function () {
                 Boolean(!inputName)
             );
         }
-
         if (inputName) {
             output[inputName] = inputValues;
         } else {
             checkRequired = false;
         }
     });
+    this.submitBtn.classList.toggle(
+        this.classNames.filterRequired,
+        !checkRequired
+    );
 
-    if (!checkRequired) {
-        this.submitBtn.classList.add(this.classNames.filterRequired);
-        return null;
-    } else {
-        this.submitBtn.classList.remove(this.classNames.filterRequired);
-    }
-    return output;
+    return checkRequired ? output : null;
 };
 
 Filterzy.prototype._reset = function () {
@@ -180,6 +179,11 @@ Filterzy.prototype._destroy = function () {
 //     required: true,
 // },
 
+// {lesson: Array(2),  letter: Array(3), AOQ: Array(1)}
+// AOQ : ['30']
+// lesson : ['1', '2']
+// letter : ['hiragana', 'katakana'] ['kanji']
+
 // const demoFilter = new Filterzy(
 //     `#QA-options`,
 //     magne,
@@ -192,8 +196,3 @@ Filterzy.prototype._destroy = function () {
 //         },
 //     })
 // );
-
-// {lesson: Array(2),  letter: Array(3), AOQ: Array(1)}
-// AOQ : ['30']
-// lesson : ['1', '2']
-// letter : ['hiragana', 'katakana'] ['kanji']

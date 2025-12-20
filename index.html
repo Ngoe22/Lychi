@@ -7,25 +7,54 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
+            rel="stylesheet"
+            href="https://ngoe22.github.io/popzyOfS/popzyOfS.min.css"
+        />
+        <link
             href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
+        <header class="header">
+            <img src="./assets/icon/lichee-removebg-preview.png" alt="" />
+        </header>
         <div class="body-wrap">
+            <div class="show-results"></div>
+            <form id="filterzy" class="filterzy"></form>
+            <form id="quizBoard" class="quizBoard"></form>
+
+            <button class="scrollToHead">
+                <img
+                    src="./assets/icon/arrow-up-wide-short-svgrepo-com.svg"
+                    alt=""
+                />
+            </button>
+        </div>
+
+        <!--  -->
+
+        <template id="show-results-template" data-lang="en">
             <div class="show-results">
                 <p class="show-results__score"></p>
                 <p class="show-results__messages"></p>
-                <p class="show-results__subtitle">
-                    Nghi ngoi tan huong cuoc song , xiu nua hoc tiep nhe
-                </p>
                 <div class="show-results__action">
-                    <button class="show-results__clear">
-                        Van co the hoc tiep
-                    </button>
+                    <button class="show-results__clear">Play again</button>
                     <a class="show-results__backHomepage" href="">
-                        OK nghi thoi
+                        Take a rest !
+                    </a>
+                </div>
+            </div>
+        </template>
+        <template id="show-results-template" data-lang="vn">
+            <div class="show-results">
+                <p class="show-results__score"></p>
+                <p class="show-results__messages"></p>
+                <div class="show-results__action">
+                    <button class="show-results__clear">Học tiếp</button>
+                    <a class="show-results__backHomepage" href="">
+                        Nghỉ ngơi
                     </a>
                 </div>
             </div>
@@ -38,13 +67,37 @@
                     alt=""
                 />
             </button>
-        </div>
+        </template>
+
+        <template id="modalNote-template" data-lang="en">
+            <p class="modalNote__header">Construction !!!</p>
+            <p class="modalNote__title">
+                Combine Hiragana or Katakana characters to form corresponding
+                vocabulary words.
+            </p>
+            <ul class="modalNote__list">
+                <li class="modalNote__item"></li>
+            </ul>
+        </template>
+
+        <template id="modalNote-template" data-lang="vn">
+            <p class="modalNote__header">Hướng dẫn sử dụng !!!</p>
+            <p class="modalNote__title">
+                Nối các chữ Hiragana hoặc Katakana thành từ vựng tương ứng
+            </p>
+            <ul class="modalNote__list">
+                <li class="modalNote__item"></li>
+            </ul>
+        </template>
         <!-- JS files -->
+        <!-- <script src="https://ngoe22.github.io/popzyOfS/popzyOfS.min.js"></script> -->
+        <script src="./lang.js"></script>
         <script src="./letter.js"></script>
         <script src="./vocab.js"></script>
         <script src="./Filterzy.js"></script>
         <script src="./Quizzy.js"></script>
-        <script src="./lychi.js"></script>
+        <script src="./Popzy.js"></script>
+        <script src="./filterToQA.js"></script>
         <script src="./main.js"></script>
     </body>
 </html>
@@ -53,5 +106,12 @@
 neu co tu voi ~ , chon ca cum ~jin
 voi nhung tu co hai cach doc 1kai 1gai chon ca dau () dong mo ngoac 
 [お]国
+
+-->
+
+<!-- 
+
+<button class="lychiModal-cancel" fdprocessedid="ej4myp">Điều chỉnh</button>
+<button class="lychiModal-continue" fdprocessedid="xmqrev">OK</button>
 
 -->

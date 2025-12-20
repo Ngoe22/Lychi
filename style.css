@@ -143,6 +143,19 @@ body {
 * {
     box-sizing: border-box;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px 1px rgb(233, 83, 83);
+}
+
+.header img {
+    width: 100px;
+    filter: drop-shadow(3px 2px 3px rgba(206, 97, 97, 1));
+}
+
 /* =================== 
 {
     filterBlock: `filterzy-block`,
@@ -173,26 +186,43 @@ body {
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
 }
+.filterzy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
 .filterzy-block {
+    flex-basis: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
-    margin: 20px 0;
+    gap: 8px;
     position: relative;
 }
-.filterzy-block.filterzy-required::after {
+/* .filterzy-block.filterzy-required .filterzy-title::before {
     content: "";
-    position: absolute;
-    /* right: 10px; */
-    top: 0;
-    left: -22px;
+    width: 20px;
+    height: 20px;
+
+    background-image: url(./assets/icon/cross-close-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+
+.filterzy-block.filterzy-required .filterzy-title::after {
+    content: "| *";
+    font-style: italic;
+    font-size: 1.4rem;
+    color: tomato;
 }
 
 .filterzy-title {
     width: 100%;
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.7rem;
 }
 
 .filterzy-label {
@@ -203,29 +233,42 @@ body {
     border: 1px solid;
     flex-shrink: 0;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.1s;
     opacity: 0.5;
 }
 
+/* 
+border-color: rgb(228 44 85);
+    color: rgb(254 109 112);
+
+    green
+    rgb(102, 155, 102);
+*/
+
 .filterzy-label:has(:checked) {
-    border-color: rgb(102, 155, 102);
-    color: rgb(84, 160, 84);
+    border-color: rgb(97, 182, 97);
+    color: white;
+    background-color: rgb(97, 182, 97);
     opacity: 1;
-    box-shadow: 0 0 1px 1px;
+    box-shadow: -2px 2px 2px 0px rgba(67, 67, 67, 0.6);
 }
 
 .filterzy-submit-btn,
 .filterzy-cancel-btn {
     background-color: transparent;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: 0;
-    margin-right: 10px;
     margin-top: 20px;
     font-size: 2rem;
     border-radius: 5px;
     font-weight: 600;
-    color: rgb(50, 186, 227);
     cursor: pointer;
+    color: white;
+    background-color: rgb(254 109 112);
+    box-shadow: -2px 2px 2px 0px rgba(67, 67, 67, 0.6);
+}
+.filterzy-cancel-btn {
+    margin-left: auto;
 }
 
 /* 
@@ -242,10 +285,23 @@ body {
 */
 
 .quizzy-block {
-    margin-bottom: 40px;
+    position: relative;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
 }
+
+/* .quizzy-block::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    display: block;
+    width: 40px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgb(205, 205, 205);
+} */
 
 .quizzy-question {
     font-size: 1.8rem;
@@ -255,6 +311,7 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     margin-bottom: 10px;
+    line-height: 150%;
 }
 
 .quizzy-userAnswer {
@@ -291,6 +348,11 @@ body {
     background-size: contain;
 }
 
+.incorrect.quizzy-userAnswer ~ .quizzy-answers,
+.correct.quizzy-userAnswer ~ .quizzy-answers {
+    opacity: 0.2;
+}
+
 .quizzy-correctAnswer.show {
     display: flex;
     align-items: center;
@@ -320,7 +382,7 @@ body {
     flex-wrap: wrap;
     flex-basis: 100%;
     flex-shrink: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-top: 10px;
 }
 
@@ -374,10 +436,11 @@ body {
 }
 
 /* ============================= */
+/* show results */
 
 .show-results__score {
-    font-weight: 600;
-    font-size: 4rem;
+    font-weight: 700;
+    font-size: 4.5rem;
 }
 
 .show-results__messages {
@@ -391,6 +454,7 @@ body {
 .show-results__action {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 5px;
     flex-wrap: wrap;
 }
@@ -404,9 +468,63 @@ body {
     text-decoration: none;
     font-size: 1.6rem;
     flex-shrink: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.show-results__clear {
+    color: tomato;
+    border-color: rgb(252, 112, 87);
+}
+.show-results__backHomepage {
+    color: rgb(84, 160, 84);
+    border-color: rgb(84, 160, 84);
 }
 
-/* 
-rgb(102, 155, 102);
-rgba(255, 99, 71, 0.9);
-*/
+/* ========================================= */
+/* Popzy */
+
+.popzy__close {
+    display: none;
+}
+
+.popzy__content {
+    min-height: 50px;
+    line-height: 150%;
+}
+
+.lychiModal-cancel,
+.lychiModal-continue {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.lychiModal-cancel {
+    border-color: rgb(254 109 112);
+    color: rgb(254 109 112);
+}
+.lychiModal-continue {
+    color: rgb(84, 160, 84);
+    border-color: rgb(84, 160, 84);
+}
+
+/*  */
+
+/* ========================================= */
+/* Modal */
+
+.modalNote__header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.modalNote__title {
+    word-spacing: 2px;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}

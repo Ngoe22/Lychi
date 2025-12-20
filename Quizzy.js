@@ -14,6 +14,7 @@ const Quizzy = function (selector, onSubmit, classNames = {}) {
             quizAnswer: `quizzy-answer`,
             quizDelete: `quizzy-delete`,
             quizSubmit: `quizzy-submit`,
+            quizOrder: `quizzy-order`,
         },
         classNames
     );
@@ -75,6 +76,14 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
             },
         });
 
+        // this._addingCHild({
+        //     parent: quizBlock,
+        //     attribute: {
+        //         class: this.classNames.quizOrder,
+        //     },
+        //     html : `${i+1}`
+        // });
+
         this._addingCHild({
             parent: quizBlock,
             attribute: {
@@ -106,17 +115,8 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
                 e.preventDefault();
                 const order = e.target.getAttribute(`data-order`);
                 let userA = this.userAnswerNodeList[order];
-
                 userA.innerText = userA.innerText.slice(0, -1);
-
                 this.currentBlockCheckedNodeList[order].pop().checked = false;
-
-                // this.userAnswerNodeList[order].innerText = ``;
-                // this.answerOptionsNodeList[order]
-                //     .querySelectorAll(`input`)
-                //     .forEach(function (value) {
-                //         value.checked = false;
-                //     });
             },
         });
         this.deleteNodeList.push(deleteBtn);
@@ -196,15 +196,17 @@ Quizzy.prototype._hiddenDelete = function () {
 
 Quizzy.prototype._showCorrectAnswer = function () {
     let score = 0;
-
     this.correctAnswerNodeList.forEach((value, index) => {
-        value.innerText = this.QA[index].showAnswer;
-        value.classList.add(`show`);
-        if (this.userAnswerNodeList[index].innerText === value.innerText) {
+        if (
+            this.userAnswerNodeList[index].innerText ===
+            this.QA[index].showAnswer
+        ) {
             score++;
             this.userAnswerNodeList[index].classList.add(`correct`);
         } else {
             this.userAnswerNodeList[index].classList.add(`incorrect`);
+            value.innerText = this.QA[index].showAnswer;
+            value.classList.add(`show`);
         }
     });
     this.score = { total: this.QA.length, passed: score };
