@@ -77,6 +77,8 @@ filterToQA.prototype._vocabToQA = function (array, options) {
             let random = Math.floor(Math.random() * l);
             otherAns.push(options.other[random]);
         }
+        this._mixArray(otherAns);
+
         output.push({
             question: value[options.question],
             showAnswer: value[options.showAnswer],
