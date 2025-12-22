@@ -204,7 +204,7 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 3px;
     position: relative;
 }
 /* .filterzy-block.filterzy-required .filterzy-title::before {
@@ -230,12 +230,13 @@ body {
     align-items: center;
     gap: 15px;
     font-size: 1.7rem;
+    margin-bottom: 10px;
 }
 
 .filterzy-label {
     font-size: 1.8rem;
     font-weight: 600;
-    padding: 10px 25px;
+    padding: 13px 25px;
     border-radius: 8px;
     border: 1px solid;
     flex-shrink: 0;
