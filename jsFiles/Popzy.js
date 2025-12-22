@@ -76,7 +76,11 @@ Popzy.prototype._build = function () {
 
 Popzy.prototype.setContent = function (html) {
     this.contentHtml = html;
-    this._renderFooterContent();
+    this._backdrop.querySelector(`.popzy__content`).innerHTML = html;
+};
+Popzy.prototype.clearContent = function () {
+    this.contentHtml = ` `;
+    this._backdrop.querySelector(`.popzy__content`).innerHTML = ` `;
 };
 
 Popzy.prototype.setFooterContent = function (html) {
@@ -105,6 +109,14 @@ Popzy.prototype._renderFooterButtons = function () {
         this._footerButtons.forEach((button) => {
             this._modalFooter.append(button);
         });
+    }
+};
+Popzy.prototype._clearFooterButtons = function () {
+    if (this._modalFooter) {
+        this._footerButtons.forEach((button) => {
+            button.remove;
+        });
+        this._footerButtons = [];
     }
 };
 Popzy.prototype.open = function () {

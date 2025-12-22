@@ -1,8 +1,8 @@
-const Filterzy = function (selector, initArray, funcs = {}, classNames = {}) {
+const Filterzy = function (selector, initArray, funcs = {}, userOPtions = {}) {
     this.container = document.querySelector(selector);
     if (!this.container) return console.error(`Filterzy : selector is invalid`);
 
-    this.classNames = Object.assign(
+    this.userOPtions = Object.assign(
         {
             filterBlock: `filterzy-block`,
             filterTitle: `filterzy-title`,
@@ -13,7 +13,7 @@ const Filterzy = function (selector, initArray, funcs = {}, classNames = {}) {
             filterSubmitButtonHtml: `Submit`,
             filterCancelButtonHtml: `Cancel`,
         },
-        classNames
+        userOPtions
     );
 
     this.funcs = Object.assign(
@@ -51,14 +51,17 @@ Filterzy.prototype._addChild = function (input = {}) {
     return newNode;
 };
 
-Filterzy.prototype._render = function (initArray) {
+Filterzy.prototype._render = function (
+    initArray,
+    costumeBtnHtml = { cancelBtn: ``, submitBtn: `` }
+) {
     initArray.forEach((data) => {
         // block
         const block = this._addChild({
             parentNode: this.container,
             htmlTag: `section`,
             setAttribute: {
-                class: this.classNames.filterBlock,
+                class: this.userOPtions.filterBlock,
                 "data-required": data.required,
             },
         });
@@ -68,7 +71,7 @@ Filterzy.prototype._render = function (initArray) {
         this._addChild({
             parentNode: block,
             htmlTag: `p`,
-            setAttribute: { class: this.classNames.filterTitle },
+            setAttribute: { class: this.userOPtions.filterTitle },
             html: `${data.title}`,
         });
 
@@ -76,7 +79,7 @@ Filterzy.prototype._render = function (initArray) {
             let temp = this._addChild({
                 parentNode: block,
                 htmlTag: `label`,
-                setAttribute: { class: this.classNames.filterLabel },
+                setAttribute: { class: this.userOPtions.filterLabel },
                 html: `<input hidden  type="${data.inputType}" name="${data.name}" value="${innerValue}" /> ${data.valueShow[index]}`,
             });
 
@@ -92,8 +95,10 @@ Filterzy.prototype._render = function (initArray) {
     this.cancelBtn = this._addChild({
         parentNode: this.container,
         htmlTag: `button`,
-        setAttribute: { class: this.classNames.filterCancelButton },
-        html: this.classNames.filterCancelButtonHtml,
+        setAttribute: { class: this.userOPtions.filterCancelButton },
+        html: costumeBtnHtml.cancelBtn
+            ? costumeBtnHtml.cancelBtn
+            : this.userOPtions.filterCancelButtonHtml,
         addClickEvent: (e) => {
             e.preventDefault();
             this._reset();
@@ -104,8 +109,10 @@ Filterzy.prototype._render = function (initArray) {
     this.submitBtn = this._addChild({
         parentNode: this.container,
         htmlTag: `button`,
-        setAttribute: { class: this.classNames.filterSubmitButton },
-        html: this.classNames.filterSubmitButtonHtml,
+        setAttribute: { class: this.userOPtions.filterSubmitButton },
+        html: costumeBtnHtml.submitBtn
+            ? costumeBtnHtml.submitBtn
+            : this.userOPtions.filterSubmitButtonHtml,
         addClickEvent: (e) => {
             e.preventDefault();
             this.funcs.onSubmit(this._getOutput());
@@ -127,7 +134,7 @@ Filterzy.prototype._getOutput = function () {
 
         if (block.getAttribute(`data-required`) === `true`) {
             block.classList.toggle(
-                this.classNames.filterRequired,
+                this.userOPtions.filterRequired,
                 Boolean(!inputName)
             );
         }
@@ -138,7 +145,7 @@ Filterzy.prototype._getOutput = function () {
         }
     });
     this.submitBtn.classList.toggle(
-        this.classNames.filterRequired,
+        this.userOPtions.filterRequired,
         !checkRequired
     );
 
@@ -158,7 +165,7 @@ Filterzy.prototype._reset = function () {
 };
 
 Filterzy.prototype._destroy = function () {
-    // this.classNames = null; // keep
+    // this.userOPtions = null; // keep
     // this.funcs = null; keep
     this.filterBlocks = [];
     this.cancelBtn.onclick = null;
@@ -170,6 +177,7 @@ Filterzy.prototype._destroy = function () {
 
 // ==========================
 
+//  input = []
 // {
 //     inputType: `radio`,
 //     title: `So luong tu vung `,
@@ -177,13 +185,16 @@ Filterzy.prototype._destroy = function () {
 //     value: [`20`, `30`, `50`],
 //     valueShow: [`20`, `30`, `50`],
 //     required: true,
+//     radioDefault: `20`,
 // },
 
+// output = {}
 // {lesson: Array(2),  letter: Array(3), AOQ: Array(1)}
 // AOQ : ['30']
 // lesson : ['1', '2']
 // letter : ['hiragana', 'katakana'] ['kanji']
 
+// declare
 // const demoFilter = new Filterzy(
 //     `#QA-options`,
 //     magne,

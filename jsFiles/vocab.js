@@ -5,7 +5,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `tôi`,
+                    vi: `tôi`,
                     hv: `TƯ`,
                     kanji: `私`,
                     hira: "わたし",
@@ -17,7 +17,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `chúng ta, chúng tôi`,
+                    vi: `chúng ta, chúng tôi`,
                     hv: ``,
                     kanji: `私たち`,
                     hira: "わたしたち",
@@ -29,7 +29,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `các bạn, các anh/chị, mọi người, quý vị`,
+                    vi: `các bạn, các anh/chị, mọi người, quý vị`,
                     hv: `GIAI`,
                     kanji: `皆さん`,
                     hira: "みなさん",
@@ -41,7 +41,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `bé (hậu tố thêm vào sau tên bé trai thay cho ～さん)`,
+                    vi: `bé (hậu tố thêm vào sau tên bé trai thay cho ～さん)`,
                     hv: `QUẢN`,
                     kanji: `君`,
                     hira: `くん`,
@@ -53,7 +53,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `người nước ～`,
+                    vi: `người nước ～`,
                     hv: `NHÂN`,
                     kanji: `人`,
                     hira: `じん`,
@@ -65,7 +65,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `giáo viên (không dùng để nói về nghề nghiệp của mình)`,
+                    vi: `giáo viên (không dùng để nói về nghề nghiệp của mình)`,
                     hv: `TIÊN SINH`,
                     kanji: `先生`,
                     hira: "せんせい",
@@ -77,7 +77,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `giáo viên`,
+                    vi: `giáo viên`,
                     hv: `GIÁO SƯ`,
                     kanji: `教師`,
                     hira: "きょうし",
@@ -89,7 +89,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `học sinh, sinh viên`,
+                    vi: `học sinh, sinh viên`,
                     hv: `HỌC SINH`,
                     kanji: `学生`,
                     hira: "がくせい",
@@ -101,7 +101,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `nhân viên công ty`,
+                    vi: `nhân viên công ty`,
                     hv: `HỘI XÃ VIÊN`,
                     kanji: `会社員`,
                     hira: "かいしゃいん",
@@ -113,7 +113,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `nhân viên công ty ～`,
+                    vi: `nhân viên công ty ～`,
                     hv: `XÃ VIÊN`,
                     kanji: `社員`,
                     hira: `しゃいん`,
@@ -125,7 +125,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `nhân viên ngân hàng`,
+                    vi: `nhân viên ngân hàng`,
                     hv: `NGÂN HÀNH VIÊN`,
                     kanji: `銀行員`,
                     hira: "ぎんこういん",
@@ -137,7 +137,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `bác sĩ`,
+                    vi: `bác sĩ`,
                     hv: `Y GIÁ`,
                     kanji: `医者`,
                     hira: "いしゃ",
@@ -149,7 +149,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Nhà nghiên cứu`,
+                    vi: `Nhà nghiên cứu`,
                     hv: `NGHIÊN CỨU GIÁ`,
                     kanji: `研究者`,
                     hira: "けんきゅうしゃ",
@@ -161,7 +161,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `trường đại học`,
+                    vi: `trường đại học`,
                     hv: `ĐẠI HỌC`,
                     kanji: `大学`,
                     hira: "だいがく",
@@ -173,7 +173,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `bệnh viện`,
+                    vi: `bệnh viện`,
                     hv: `BỆNH VIÊN`,
                     kanji: `病院`,
                     hira: "びょういん",
@@ -185,7 +185,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `điện`,
+                    vi: `điện`,
                     hv: `DIỆN KHÍ`,
                     kanji: `電気`,
                     hira: "でんき",
@@ -197,7 +197,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `ai (hỏi người nào đó)`,
+                    vi: `ai (hỏi người nào đó)`,
                     hv: `thùy`,
                     kanji: `誰`,
                     hira: "だれ",
@@ -210,7 +210,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `～tuổi`,
+                    vi: `～tuổi`,
                     hv: `TUẾ`,
                     kanji: `歳`,
                     hira: "さい",
@@ -222,7 +222,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `mấy tuổi`,
+                    vi: `mấy tuổi`,
                     hv: `HÀ TUẾ`,
                     kanji: `何歳`,
                     hira: "なんさい",
@@ -234,7 +234,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Hàn quốc`,
+                    vi: `Hàn quốc`,
                     hv: `HÀN QUỐC`,
                     kanji: `韓国`,
                     hira: "かんこく",
@@ -246,7 +246,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Trung Quốc`,
+                    vi: `Trung Quốc`,
                     hv: `TRUNG QUỐC`,
                     kanji: `中国`,
                     hira: "ちゅうごく",
@@ -258,7 +258,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Nhật`,
+                    vi: `Nhật`,
                     hv: `NHẬT BẢN`,
                     kanji: `日本`,
                     hira: "にほん",
@@ -270,7 +270,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Trường đại học Sakura`,
+                    vi: `Trường đại học Sakura`,
                     hv: `ĐẠI HỌC`,
                     kanji: `桜大学`,
                     hira: "さくらだいがく",
@@ -284,7 +284,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `vị kia`,
+                    vi: `vị kia`,
                     hv: `PHƯƠNG`,
                     kanji: `あの方`,
                     hira: "あのかた",
@@ -296,7 +296,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `ban, anh/chị, ông/bà...`,
+                    vi: `ban, anh/chị, ông/bà...`,
                     hv: ``,
                     kanji: ``,
                     hira: "あなた",
@@ -308,7 +308,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `người kia, người đó`,
+                    vi: `người kia, người đó`,
                     hv: `NHÂN`,
                     kanji: `あの人`,
                     hira: "あのひと",
@@ -321,7 +321,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `anh, chị, ông, bà...`,
+                    vi: `anh, chị, ông, bà...`,
                     hv: ``,
                     kanji: ``,
                     hira: `～さん`,
@@ -333,7 +333,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `bé (hậu tố thêm vào sau tên bé gái thay cho ～さん)`,
+                    vi: `bé (hậu tố thêm vào sau tên bé gái thay cho ～さん)`,
                     hv: ``,
                     kanji: ``,
                     hira: `～ちゃん`,
@@ -346,7 +346,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `vị nào (là cách nói lịch sự của だれ)`,
+                    vi: `vị nào (là cách nói lịch sự của だれ)`,
                     hv: ``,
                     kanji: ``,
                     hira: "どなた",
@@ -359,7 +359,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `mấy tuổi (là cách nói lịch sự của なんさい)`,
+                    vi: `mấy tuổi (là cách nói lịch sự của なんさい)`,
                     hv: ``,
                     kanji: ``,
                     hira: "おいくつ",
@@ -371,7 +371,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `xin lỗi ...`,
+                    vi: `xin lỗi ...`,
                     hv: `THẤT LỆ`,
                     kanji: `失礼ですが`,
                     hira: "しつれいですが",
@@ -383,7 +383,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `bạn tên gì ?`,
+                    vi: `bạn tên gì ?`,
                     hv: `DANH TIÊN`,
                     kanji: `お名前は？`,
                     hira: "おなまえは？",
@@ -395,7 +395,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Rất hân hạnh được gặp anh/chị. (chào lần đầu)`,
+                    vi: `Rất hân hạnh được gặp anh/chị. (chào lần đầu)`,
                     hv: `SƠ`,
                     kanji: `初めまして`,
                     hira: "はじめまして",
@@ -407,7 +407,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `đây là ngài ～`,
+                    vi: `đây là ngài ～`,
                     hv: ``,
                     kanji: ``,
                     hira: "こちらは～さんです",
@@ -419,7 +419,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `đến từ ～`,
+                    vi: `đến từ ～`,
                     hv: ``,
                     kanji: ``,
                     hira: "からきました",
@@ -433,7 +433,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `kỹ sư`,
+                    vi: `kỹ sư`,
                     kata: `エンジニア`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ nghề nghiệp
@@ -442,7 +442,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Mỹ`,
+                    vi: `Mỹ`,
                     kata: `アメリカ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -451,7 +451,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Anh`,
+                    vi: `Anh`,
                     kata: `イギリス`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -460,7 +460,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Ấn Độ`,
+                    vi: `Ấn Độ`,
                     kata: `インド`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -469,7 +469,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Indonesia`,
+                    vi: `Indonesia`,
                     kata: `インドネシア`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -478,7 +478,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Thái Lan`,
+                    vi: `Thái Lan`,
                     kata: `タイ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -487,7 +487,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Đức`,
+                    vi: `Đức`,
                     kata: `ドイツ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -496,7 +496,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Pháp`,
+                    vi: `Pháp`,
                     kata: `フランス`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -505,7 +505,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `1`,
-                    vn: `Brazil`,
+                    vi: `Brazil`,
                     kata: `ブラジル`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -518,7 +518,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `sách`,
+                    vi: `sách`,
                     hv: `BẢN`,
                     kanji: `本`,
                     hira: "ほん",
@@ -530,7 +530,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `từ điển`,
+                    vi: `từ điển`,
                     hv: `TỪ THƯ`,
                     kanji: `辞書`,
                     hira: "じしょ",
@@ -542,7 +542,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `tạp chí`,
+                    vi: `tạp chí`,
                     hv: `TẠP CHÍ`,
                     kanji: `雑誌`,
                     hira: "ざっし",
@@ -554,7 +554,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `báo`,
+                    vi: `báo`,
                     hv: `TÂN VĂN`,
                     kanji: `新聞`,
                     hira: "しんぶん",
@@ -566,7 +566,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `sổ tay`,
+                    vi: `sổ tay`,
                     hv: `THỦ TRƯỞNG`,
                     kanji: `手帳`,
                     hira: "てちょう",
@@ -578,7 +578,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `danh thiếp`,
+                    vi: `danh thiếp`,
                     hv: `DANH THÍCH`,
                     kanji: `名刺`,
                     hira: "めいし",
@@ -590,7 +590,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `bút chì`,
+                    vi: `bút chì`,
                     hv: `DUYỄN BÚT`,
                     kanji: `鉛筆`,
                     hira: "えんびつ",
@@ -602,7 +602,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Chìa khoá`,
+                    vi: `Chìa khoá`,
                     hv: `KIỆN`,
                     kanji: `鍵`,
                     hira: "かぎ",
@@ -614,7 +614,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `đồng hồ`,
+                    vi: `đồng hồ`,
                     hv: `THỜI KẾ`,
                     kanji: `時計`,
                     hira: "とけい",
@@ -626,7 +626,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Ô, dù`,
+                    vi: `Ô, dù`,
                     hv: `TÁN`,
                     kanji: `傘`,
                     hira: "かさ",
@@ -638,7 +638,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `cặp sách`,
+                    vi: `cặp sách`,
                     hv: ``,
                     kanji: `鞄`,
                     hira: "かばん",
@@ -650,7 +650,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `xe hơi, ô tô`,
+                    vi: `xe hơi, ô tô`,
                     hv: `TỰ ĐỘNG XA`,
                     kanji: `自動車`,
                     hira: "じどうしゃ",
@@ -662,7 +662,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `bàn`,
+                    vi: `bàn`,
                     hv: `KỲ`,
                     kanji: `机`,
                     hira: "つくえ",
@@ -674,7 +674,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `ghế`,
+                    vi: `ghế`,
                     hv: ``,
                     kanji: `椅子`,
                     hira: "いす",
@@ -686,7 +686,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `tiếng Anh`,
+                    vi: `tiếng Anh`,
                     hv: `ANH NGỮ`,
                     kanji: `英語`,
                     hira: "えいご",
@@ -698,7 +698,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `tiếng Nhật`,
+                    vi: `tiếng Nhật`,
                     hv: `NHẬT BÀN NGỮ`,
                     kanji: `日本語`,
                     hira: "にほんご",
@@ -710,7 +710,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `tiếng ~`,
+                    vi: `tiếng ~`,
                     hv: `NGỮ`,
                     kanji: `語`,
                     hira: "ご",
@@ -722,7 +722,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `cái gì`,
+                    vi: `cái gì`,
                     hv: `HÀ`,
                     kanji: `何`,
                     hira: "なん",
@@ -734,7 +734,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `không phải, sai rồi`,
+                    vi: `không phải, sai rồi`,
                     hv: `VI`,
                     kanji: `違います`,
                     hira: "ちがいます",
@@ -748,7 +748,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Đây, cái này (vật gần người nói)`,
+                    vi: `Đây, cái này (vật gần người nói)`,
                     hv: ``,
                     kanji: ``,
                     hira: "これ",
@@ -760,7 +760,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Đó, cái đó (vật gần người nghe)`,
+                    vi: `Đó, cái đó (vật gần người nghe)`,
                     hv: ``,
                     kanji: ``,
                     hira: "それ",
@@ -772,7 +772,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Kia, cái kia (vật xa người nghe và nói)`,
+                    vi: `Kia, cái kia (vật xa người nghe và nói)`,
                     hv: ``,
                     kanji: ``,
                     hira: "あれ",
@@ -784,7 +784,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `~này`,
+                    vi: `~này`,
                     hv: ``,
                     kanji: ``,
                     hira: "この",
@@ -796,7 +796,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `~đó`,
+                    vi: `~đó`,
                     hv: ``,
                     kanji: ``,
                     hira: "その",
@@ -808,7 +808,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `~kia`,
+                    vi: `~kia`,
                     hv: ``,
                     kanji: ``,
                     hira: "あの",
@@ -821,7 +821,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Đúng vậy`,
+                    vi: `Đúng vậy`,
                     hv: ``,
                     kanji: ``,
                     hira: "そう",
@@ -834,7 +834,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `thế à?`,
+                    vi: `thế à?`,
                     hv: ``,
                     kanji: ``,
                     hira: "そですか",
@@ -846,7 +846,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `đây là chút lòng thành`,
+                    vi: `đây là chút lòng thành`,
                     hv: `KHÍ TRÌ`,
                     kanji: `ほんの気持ちです`,
                     hira: "ほんのきもちです",
@@ -858,7 +858,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `xin mời`,
+                    vi: `xin mời`,
                     hv: ``,
                     kanji: ``,
                     hira: "どうぞ",
@@ -870,7 +870,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `cám ơn`,
+                    vi: `cám ơn`,
                     hv: ``,
                     kanji: ``,
                     hira: "どうも",
@@ -882,7 +882,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Xin chân thành cám ơn`,
+                    vi: `Xin chân thành cám ơn`,
                     hv: ``,
                     kanji: ``,
                     hira: "[どうも]ありがとう[ございます]",
@@ -894,7 +894,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Từ nay mong được giúp đỡ`,
+                    vi: `Từ nay mong được giúp đỡ`,
                     hv: `THẾ THOẠI`,
                     kanji: `これからお世話になります`,
                     hira: "これからおせわになります",
@@ -906,7 +906,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `chính tôi mới là người mong được giúp đỡ`,
+                    vi: `chính tôi mới là người mong được giúp đỡ`,
                     hv: ``,
                     kanji: ``,
                     hira: "こちらこそよろしく",
@@ -920,7 +920,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `máy ảnh`,
+                    vi: `máy ảnh`,
                     kata: `カメラ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -929,7 +929,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `máy vi tính`,
+                    vi: `máy vi tính`,
                     kata: `コンピューター`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -938,7 +938,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `sôcôla`,
+                    vi: `sôcôla`,
                     kata: `チョコレート`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -947,7 +947,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `cà phê`,
+                    vi: `cà phê`,
                     kata: `コーヒー`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -956,7 +956,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Vở`,
+                    vi: `Vở`,
                     kata: `ノート`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -965,7 +965,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Card, thẻ`,
+                    vi: `Card, thẻ`,
                     kata: `カード`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -974,7 +974,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `Thẻ điện thoại`,
+                    vi: `Thẻ điện thoại`,
                     kata: `テレホンカード`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -983,7 +983,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `bút bi`,
+                    vi: `bút bi`,
                     kata: `ボールペン`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -992,7 +992,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `bút chì kim`,
+                    vi: `bút chì kim`,
                     kata: `シャープペンシル`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1001,7 +1001,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `băng (cassette)`,
+                    vi: `băng (cassette)`,
                     kata: `カセットテープ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1010,7 +1010,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `máy ghi âm`,
+                    vi: `máy ghi âm`,
                     kata: `テープレコーダー`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1019,7 +1019,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `TV`,
+                    vi: `TV`,
                     kata: `テレビ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1028,7 +1028,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `2`,
-                    vn: `radio`,
+                    vi: `radio`,
                     kata: `ラジオ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1041,7 +1041,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `phòng học`,
+                    vi: `phòng học`,
                     hv: `GIÁO THẤT`,
                     kanji: `教室`,
                     hira: "きょうしつ",
@@ -1053,7 +1053,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `nhà ăn`,
+                    vi: `nhà ăn`,
                     hv: `THỰC ĐƯỜNG`,
                     kanji: `食堂`,
                     hira: "しょくどう",
@@ -1065,7 +1065,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `văn phòng`,
+                    vi: `văn phòng`,
                     hv: `SỰ VỤ SỞ`,
                     kanji: `事務所`,
                     hira: "じむしょ",
@@ -1077,7 +1077,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `phòng họp`,
+                    vi: `phòng họp`,
                     hv: `HỘI NGHỊ THẤT`,
                     kanji: `会議室`,
                     hira: "かいぎしつ",
@@ -1089,7 +1089,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `quầy tiếp tân`,
+                    vi: `quầy tiếp tân`,
                     hv: `THU PHÓ`,
                     kanji: `受付`,
                     hira: "うけつけ",
@@ -1101,7 +1101,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `phòng`,
+                    vi: `phòng`,
                     hv: `BỐ ỐC`,
                     kanji: `部屋`,
                     hira: "へや",
@@ -1113,7 +1113,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `cầu thang bộ`,
+                    vi: `cầu thang bộ`,
                     hv: `GIAI ĐOAN`,
                     kanji: `階段`,
                     hira: "かいだん",
@@ -1125,7 +1125,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `nước`,
+                    vi: `nước`,
                     hv: `QUỐC`,
                     kanji: `お国`,
                     hira: "おくに",
@@ -1137,7 +1137,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `công ty`,
+                    vi: `công ty`,
                     hv: `HỘI XÃ`,
                     kanji: `会社`,
                     hira: "かいしゃ",
@@ -1149,7 +1149,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `nhà`,
+                    vi: `nhà`,
                     hv: `GIA`,
                     kanji: `家`,
                     hira: "うち",
@@ -1161,7 +1161,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Điện thoại`,
+                    vi: `Điện thoại`,
                     hv: `ĐIỆN THOẠI`,
                     kanji: `電話`,
                     hira: "でんわ",
@@ -1173,7 +1173,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `giày`,
+                    vi: `giày`,
                     hv: `NGOA`,
                     kanji: `靴`,
                     hira: "くつ",
@@ -1185,7 +1185,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `thuốc lá`,
+                    vi: `thuốc lá`,
                     hv: `YÊN THẢO`,
                     kanji: `煙草`,
                     hira: "たばこ",
@@ -1197,7 +1197,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `quầy bán hàng`,
+                    vi: `quầy bán hàng`,
                     hv: `MAI TRƯỜNG`,
                     kanji: `売り場`,
                     hira: "うりば",
@@ -1209,7 +1209,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `dưới lòng đất, tầng hầm`,
+                    vi: `dưới lòng đất, tầng hầm`,
                     hv: `ĐỊA HẠ`,
                     kanji: `地下`,
                     hira: "ちか",
@@ -1221,7 +1221,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Tầng thứ―`,
+                    vi: `Tầng thứ―`,
                     hv: `GIAI`,
                     kanji: `階`,
                     hira: "かい", // かい&がい
@@ -1233,7 +1233,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Tầng mấy`,
+                    vi: `Tầng mấy`,
                     hv: `HA GIAI`,
                     kanji: `何階`,
                     hira: "なんがい",
@@ -1245,7 +1245,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `yên`,
+                    vi: `yên`,
                     hv: `VIÊN`,
                     kanji: `円`,
                     hira: "えん",
@@ -1257,7 +1257,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `bao nhiêu tiền`,
+                    vi: `bao nhiêu tiền`,
                     hv: `KI`,
                     kanji: `幾ら`,
                     hira: "いくら",
@@ -1269,7 +1269,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `trăm`,
+                    vi: `trăm`,
                     hv: `BÁCH`,
                     kanji: `百`,
                     hira: "ひゃく",
@@ -1281,7 +1281,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `nghìn`,
+                    vi: `nghìn`,
                     hv: `THIÊN`,
                     kanji: `千`,
                     hira: "せん",
@@ -1293,7 +1293,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `mười nghìn, vạn`,
+                    vi: `mười nghìn, vạn`,
                     hv: `VẠN`,
                     kanji: `万`,
                     hira: "まん",
@@ -1307,7 +1307,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Chỗ này, đây`,
+                    vi: `Chỗ này, đây`,
                     hv: ``,
                     kanji: ``,
                     hira: "ここ",
@@ -1319,7 +1319,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Chỗ đó, đó`,
+                    vi: `Chỗ đó, đó`,
                     hv: ``,
                     kanji: ``,
                     hira: "そこ",
@@ -1331,7 +1331,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Chỗ kia, kia`,
+                    vi: `Chỗ kia, kia`,
                     hv: ``,
                     kanji: ``,
                     hira: "あそこ",
@@ -1343,7 +1343,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `đâu, chỗ nào`,
+                    vi: `đâu, chỗ nào`,
                     hv: ``,
                     kanji: ``,
                     hira: "どこ",
@@ -1355,7 +1355,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Phía này, đằng này, đây (lịch sự hơn ここ)`,
+                    vi: `Phía này, đằng này, đây (lịch sự hơn ここ)`,
                     hv: ``,
                     kanji: ``,
                     hira: "こちら",
@@ -1367,7 +1367,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Phía đó, đằng đó, đó (lịch sự hơn そこ)`,
+                    vi: `Phía đó, đằng đó, đó (lịch sự hơn そこ)`,
                     hv: ``,
                     kanji: ``,
                     hira: "そちら",
@@ -1379,7 +1379,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `đằng kia, chỗ kia, kia`,
+                    vi: `đằng kia, chỗ kia, kia`,
                     hv: ``,
                     kanji: ``,
                     hira: "あちら",
@@ -1391,7 +1391,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Phía nào, đằng nào, đâu`,
+                    vi: `Phía nào, đằng nào, đâu`,
                     hv: ``,
                     kanji: ``,
                     hira: "どちら",
@@ -1404,7 +1404,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `xin lỗi`,
+                    vi: `xin lỗi`,
                     hv: ``,
                     kanji: ``,
                     hira: "すみません",
@@ -1416,7 +1416,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Cách nói lịch sự của 'です'`,
+                    vi: `Cách nói lịch sự của 'です'`,
                     hv: ``,
                     kanji: ``,
                     hira: "でございます",
@@ -1428,7 +1428,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `xin cho xem ~`,
+                    vi: `xin cho xem ~`,
                     hv: ``,
                     kanji: ``,
                     hira: "みせてください",
@@ -1442,7 +1442,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `đại sảnh, hành lang`,
+                    vi: `đại sảnh, hành lang`,
                     kata: `ロビー`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ địa điểm
@@ -1451,7 +1451,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `nhà vệ sinh, WC`,
+                    vi: `nhà vệ sinh, WC`,
                     kata: `トイレ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ địa điểm
@@ -1460,7 +1460,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `thang máy`,
+                    vi: `thang máy`,
                     kata: `エレベーター`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ địa điểm
@@ -1469,7 +1469,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `thang cuốn`,
+                    vi: `thang cuốn`,
                     kata: `エスカレーター`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ địa điểm
@@ -1478,7 +1478,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `cà vạt`,
+                    vi: `cà vạt`,
                     kata: `ネクタイ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1487,7 +1487,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `rượu vang`,
+                    vi: `rượu vang`,
                     kata: `ワイン`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1496,7 +1496,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `thuốc lá`,
+                    vi: `thuốc lá`,
                     kata: `タバコ`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ
@@ -1505,7 +1505,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Ý`,
+                    vi: `Ý`,
                     kata: `イタリア`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -1514,7 +1514,7 @@ const vocabData = {
                 {
                     level: `N5`,
                     lesson: `3`,
-                    vn: `Thụy Sỹ`,
+                    vi: `Thụy Sỹ`,
                     kata: `スイス`,
                     imgUrl: ``,
                     kind: `noun`, // danh từ (quốc gia)
@@ -1527,7 +1527,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thức dậy",
+                    vi: "thức dậy",
                     hv: "KHỞI",
                     kanji: "起きます",
                     hira: "おきます",
@@ -1538,7 +1538,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "ngủ",
+                    vi: "ngủ",
                     hv: "TÂM",
                     kanji: "寝ます",
                     hira: "ねます",
@@ -1549,7 +1549,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "làm việc",
+                    vi: "làm việc",
                     hv: "ĐỘNG",
                     kanji: "働きます",
                     hira: "はたらきます",
@@ -1560,7 +1560,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "nghỉ ngơi",
+                    vi: "nghỉ ngơi",
                     hv: "HƯU",
                     kanji: "休みます",
                     hira: "やすみます",
@@ -1571,7 +1571,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "học tập",
+                    vi: "học tập",
                     hv: "MIỀN CƯỜNG",
                     kanji: "勉強します",
                     hira: "べんきょうします",
@@ -1582,7 +1582,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "kết thúc, hết",
+                    vi: "kết thúc, hết",
                     hv: "CHUNG",
                     kanji: "終わります",
                     hira: "おわります",
@@ -1593,7 +1593,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "ngân hàng",
+                    vi: "ngân hàng",
                     hv: "NGÂN HÀNH",
                     kanji: "銀行",
                     hira: "ぎんこう",
@@ -1604,7 +1604,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "bưu điện",
+                    vi: "bưu điện",
                     hv: "BƯU TIẾN CỤC",
                     kanji: "郵便局",
                     hira: "ゆうびんきょく",
@@ -1615,7 +1615,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thư viện",
+                    vi: "thư viện",
                     hv: "ĐỒ THƯ QUẢN",
                     kanji: "図書館",
                     hira: "としょかん",
@@ -1626,7 +1626,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "viện bảo tàng",
+                    vi: "viện bảo tàng",
                     hv: "MỸ THUẬT QUẢN",
                     kanji: "美術館",
                     hira: "びじゅつかん",
@@ -1637,7 +1637,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "số điện thoại",
+                    vi: "số điện thoại",
                     hv: "ĐIỆN THOẠI PHIÊN HIỆU",
                     kanji: "電話番号",
                     hira: "でんわばんごう",
@@ -1648,7 +1648,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "bây giờ",
+                    vi: "bây giờ",
                     hv: "KIM",
                     kanji: "今",
                     hira: "いま",
@@ -1659,7 +1659,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ sáu",
+                    vi: "thứ sáu",
                     hv: "KIM DIỆU NHẬT",
                     kanji: "金曜日",
                     hira: "きんようび",
@@ -1670,7 +1670,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ bảy",
+                    vi: "thứ bảy",
                     hv: "THỔ DIỆU NHẬT",
                     kanji: "土曜日",
                     hira: "どようび",
@@ -1681,7 +1681,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "chủ nhật",
+                    vi: "chủ nhật",
                     hv: "NHẬT DIỆU NHẬT",
                     kanji: "日曜日",
                     hira: "にちようび",
@@ -1692,7 +1692,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ mấy",
+                    vi: "thứ mấy",
                     hv: "HÀ DIỆU NHẬT",
                     kanji: "何曜日",
                     hira: "なんようび",
@@ -1703,7 +1703,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "số",
+                    vi: "số",
                     hv: "PHIÊN HIỆU",
                     kanji: "番号",
                     hira: "ばんごう",
@@ -1714,7 +1714,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "số bao nhiêu",
+                    vi: "số bao nhiêu",
                     hv: "HÀ PHIÊN",
                     kanji: "何番",
                     hira: "なんばん",
@@ -1726,7 +1726,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "~giờ",
+                    vi: "~giờ",
                     hv: "THỜI",
                     kanji: "時",
                     hira: "じ",
@@ -1737,7 +1737,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "~phút",
+                    vi: "~phút",
                     hv: "PHẦN",
                     kanji: "～分",
                     hira: "ふん", //ふん&ぶん&ぷん
@@ -1748,7 +1748,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "phân nửa",
+                    vi: "phân nửa",
                     hv: "BÁN",
                     kanji: "半",
                     hira: "はん",
@@ -1759,7 +1759,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "mấy giờ",
+                    vi: "mấy giờ",
                     hv: "HÀ THỜI",
                     kanji: "何時",
                     hira: "なんじ",
@@ -1770,7 +1770,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "mấy phút",
+                    vi: "mấy phút",
                     hv: "HÀ PHÂN",
                     kanji: "何分",
                     hira: "なんぷん",
@@ -1781,7 +1781,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "sáng (trước 12 giờ trưa)",
+                    vi: "sáng (trước 12 giờ trưa)",
                     hv: "NGỌ TIỀN",
                     kanji: "午前",
                     hira: "ごぜん",
@@ -1792,7 +1792,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "chiều (sau 12 giờ trưa)",
+                    vi: "chiều (sau 12 giờ trưa)",
                     hv: "NGỌ HẬU",
                     kanji: "午後",
                     hira: "ごご",
@@ -1803,7 +1803,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "sáng",
+                    vi: "sáng",
                     hv: "TRIỀU",
                     kanji: "朝",
                     hira: "あさ",
@@ -1814,7 +1814,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "trưa",
+                    vi: "trưa",
                     hv: "TRÚ",
                     kanji: "昼",
                     hira: "ひる",
@@ -1825,7 +1825,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "tối",
+                    vi: "tối",
                     hv: "VÃN",
                     kanji: "晩",
                     hira: "ばん",
@@ -1837,9 +1837,9 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "hôm kia",
-                    hv: "一昨日",
-                    kanji: "NHẤT TẠC NHẬT",
+                    vi: "hôm kia",
+                    hv: "NHẤT TẠC NHẬT",
+                    kanji: "一昨日",
                     hira: "おととい",
                     pureKanji: true,
                     kind: "noun",
@@ -1848,7 +1848,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "hôm qua",
+                    vi: "hôm qua",
                     hv: "TẠC NHẬT",
                     kanji: "昨日",
                     hira: "きのう",
@@ -1859,7 +1859,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "hôm nay",
+                    vi: "hôm nay",
                     hv: "KIM NHẬT",
                     kanji: "今日",
                     hira: "きょう",
@@ -1870,7 +1870,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "ngày mai",
+                    vi: "ngày mai",
                     hv: "MINH NHẬT",
                     kanji: "明日",
                     hira: "あした",
@@ -1881,7 +1881,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "ngày kia",
+                    vi: "ngày kia",
                     hv: "MINH HẬU NHẬT",
                     kanji: "明後日",
                     hira: "あさって",
@@ -1892,7 +1892,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "sáng nay",
+                    vi: "sáng nay",
                     hv: "KIM TRIỀU",
                     kanji: "今朝",
                     hira: "けさ",
@@ -1903,7 +1903,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "tối nay",
+                    vi: "tối nay",
                     hv: "KIM VÃN",
                     kanji: "今晩",
                     hira: "こんばん",
@@ -1914,7 +1914,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "nghỉ phép, ngày nghỉ",
+                    vi: "nghỉ phép, ngày nghỉ",
                     hv: "HƯU",
                     kanji: "休み",
                     hira: "やすみ",
@@ -1925,7 +1925,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "nghỉ trưa",
+                    vi: "nghỉ trưa",
                     hv: "TRÚ HƯU",
                     kanji: "昼休み",
                     hira: "ひるやすみ",
@@ -1936,7 +1936,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "mỗi sáng",
+                    vi: "mỗi sáng",
                     hv: "MỖI TRIỀU",
                     kanji: "毎朝",
                     hira: "まいあさ",
@@ -1947,7 +1947,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "mỗi tối",
+                    vi: "mỗi tối",
                     hv: "MỖI VÃN",
                     kanji: "毎晩",
                     hira: "まいばん",
@@ -1958,7 +1958,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "mỗi ngày",
+                    vi: "mỗi ngày",
                     hv: "MỖI NHẬT",
                     kanji: "毎日",
                     hira: "まいにち",
@@ -1969,7 +1969,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ hai",
+                    vi: "thứ hai",
                     hv: "NGUYỆT DIỆU NHẬT",
                     kanji: "月曜日",
                     hira: "げつようび",
@@ -1980,7 +1980,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ ba",
+                    vi: "thứ ba",
                     hv: "HỎA DIỆU NHẬT",
                     kanji: "火曜日",
                     hira: "かようび",
@@ -1991,7 +1991,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ tư",
+                    vi: "thứ tư",
                     hv: "THỦY DIỆU NHẬT",
                     kanji: "水曜日",
                     hira: "すいようび",
@@ -2002,7 +2002,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "thứ năm",
+                    vi: "thứ năm",
                     hv: "MỘC DIỆU NHẬT",
                     kanji: "木曜日",
                     hira: "もくようび",
@@ -2015,7 +2015,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "~ từ",
+                    vi: "~ từ",
                     hv: "",
                     kanji: "",
                     hira: "から",
@@ -2025,7 +2025,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "~ đến",
+                    vi: "~ đến",
                     hv: "",
                     kanji: "",
                     hira: "まで",
@@ -2035,7 +2035,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "~ và",
+                    vi: "~ và",
                     hv: "",
                     kanji: "",
                     hira: "と",
@@ -2045,7 +2045,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Ông/bà, phía ông/bà",
+                    vi: "Ông/bà, phía ông/bà",
                     hv: "",
                     kanji: "",
                     hira: "そちら",
@@ -2055,7 +2055,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Anh/chị vất vả quá (bày tỏ thông cảm)",
+                    vi: "Anh/chị vất vả quá (bày tỏ thông cảm)",
                     hv: "ĐẠI BIẾN",
                     kanji: "大変ですね",
                     hira: "たいへんですね",
@@ -2066,7 +2066,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Xin vui lòng giúp đỡ.",
+                    vi: "Xin vui lòng giúp đỡ.",
                     hv: "NGUYỆN",
                     kanji: "お願いします",
                     hira: "おねがいします",
@@ -2077,7 +2077,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Tôi hiểu rồi",
+                    vi: "Tôi hiểu rồi",
                     hv: "",
                     kanji: "",
                     hira: "かしこまりました",
@@ -2089,7 +2089,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "cửa hàng bách hóa",
+                    vi: "cửa hàng bách hóa",
                     kata: "デパート",
                     kind: "noun",
                     en: "department store",
@@ -2097,7 +2097,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "New York",
+                    vi: "New York",
                     kata: "ニューヨーク",
                     kind: "noun",
                     en: "New York",
@@ -2105,7 +2105,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Bắc Kinh",
+                    vi: "Bắc Kinh",
                     kata: "ペキン",
                     kind: "noun",
                     en: "Beijing",
@@ -2113,7 +2113,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Luân Đôn",
+                    vi: "Luân Đôn",
                     kata: "ロンドン",
                     kind: "noun",
                     en: "London",
@@ -2121,7 +2121,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Bangkok",
+                    vi: "Bangkok",
                     kata: "バンコク",
                     kind: "noun",
                     en: "Bangkok",
@@ -2129,7 +2129,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "4",
-                    vn: "Los Angeles",
+                    vi: "Los Angeles",
                     kata: "ロサンゼルス",
                     kind: "noun",
                     en: "Los Angeles",
@@ -2141,7 +2141,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "đi",
+                    vi: "đi",
                     hv: "HÀNH",
                     kanji: "行きます",
                     hira: "いきます",
@@ -2152,7 +2152,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "đến",
+                    vi: "đến",
                     hv: "LAI",
                     kanji: "来ます",
                     hira: "きます",
@@ -2163,7 +2163,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "về",
+                    vi: "về",
                     hv: "QUY",
                     kanji: "帰ります",
                     hira: "かえります",
@@ -2174,7 +2174,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "trường học",
+                    vi: "trường học",
                     hv: "HỌC HIỆU",
                     kanji: "学校",
                     hira: "がっこう",
@@ -2185,7 +2185,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "ga, nhà ga",
+                    vi: "ga, nhà ga",
                     hv: "DỊCH",
                     kanji: "駅",
                     hira: "えき",
@@ -2197,7 +2197,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "máy bay",
+                    vi: "máy bay",
                     hv: "PHI HÀNH CƠ",
                     kanji: "飛行機",
                     hira: "ひこうき",
@@ -2208,7 +2208,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "thuyền, tàu thủy",
+                    vi: "thuyền, tàu thủy",
                     hv: "THUYỀN",
                     kanji: "船",
                     hira: "ふね",
@@ -2219,7 +2219,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tàu điện",
+                    vi: "tàu điện",
                     hv: "ĐIỆN XA",
                     kanji: "電車",
                     hira: "でんしゃ",
@@ -2230,7 +2230,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tàu điện ngầm",
+                    vi: "tàu điện ngầm",
                     hv: "ĐỊA HẠ THIẾT",
                     kanji: "地下鉄",
                     hira: "ちかてつ",
@@ -2241,7 +2241,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tàu Shinkansen (tàu điện siêu tốc của Nhật)",
+                    vi: "tàu Shinkansen (tàu điện siêu tốc của Nhật)",
                     hv: "TÂN CÁN TUYẾN",
                     kanji: "新幹線",
                     hira: "しんかんせん",
@@ -2252,7 +2252,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "xe đạp",
+                    vi: "xe đạp",
                     hv: "TỰ CHUYỂN XA",
                     kanji: "自転車",
                     hira: "じてんしゃ",
@@ -2263,7 +2263,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "đi bộ",
+                    vi: "đi bộ",
                     hv: "BỘ",
                     kanji: "歩いて",
                     hira: "あるいて",
@@ -2274,7 +2274,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "người",
+                    vi: "người",
                     hv: "NHÂN",
                     kanji: "人",
                     hira: "ひと",
@@ -2285,7 +2285,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "bạn, bạn bè",
+                    vi: "bạn, bạn bè",
                     hv: "HỮU ĐẠT",
                     kanji: "友達",
                     hira: "ともだち",
@@ -2296,7 +2296,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "anh ấy, bạn trai",
+                    vi: "anh ấy, bạn trai",
                     hv: "BỈ",
                     kanji: "彼",
                     hira: "かれ",
@@ -2307,7 +2307,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "chị ấy, bạn gái",
+                    vi: "chị ấy, bạn gái",
                     hv: "BỈ NỮ",
                     kanji: "彼女",
                     hira: "かのじょ",
@@ -2318,7 +2318,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "gia đình",
+                    vi: "gia đình",
                     hv: "GIA TỘC",
                     kanji: "家族",
                     hira: "かぞく",
@@ -2329,7 +2329,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tuần trước",
+                    vi: "tuần trước",
                     hv: "TIÊN CHU",
                     kanji: "先週",
                     hira: "せんしゅう",
@@ -2340,7 +2340,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tuần này",
+                    vi: "tuần này",
                     hv: "KIM CHU",
                     kanji: "今週",
                     hira: "こんしゅう",
@@ -2351,7 +2351,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tuần sau",
+                    vi: "tuần sau",
                     hv: "LAI CHU",
                     kanji: "来週",
                     hira: "らいしゅう",
@@ -2362,7 +2362,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tháng trước",
+                    vi: "tháng trước",
                     hv: "TIÊN NGUYỆT",
                     kanji: "先月",
                     hira: "せんげつ",
@@ -2373,7 +2373,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tháng này",
+                    vi: "tháng này",
                     hv: "KIM NGUYỆT",
                     kanji: "今月",
                     hira: "こんげつ",
@@ -2384,7 +2384,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tháng sau",
+                    vi: "tháng sau",
                     hv: "LAI NGUYỆT",
                     kanji: "来月",
                     hira: "らいげつ",
@@ -2395,7 +2395,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "năm ngoái",
+                    vi: "năm ngoái",
                     hv: "KHỨ NIÊN",
                     kanji: "去年",
                     hira: "きょねん",
@@ -2406,7 +2406,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "Sân ga số ...",
+                    vi: "Sân ga số ...",
                     hv: "NHẤT PHIẾN TUYẾN",
                     kanji: "番線",
                     hira: "ばんせん",
@@ -2418,7 +2418,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tiếp theo",
+                    vi: "tiếp theo",
                     hv: "THỨ",
                     kanji: "次の",
                     hira: "つぎの",
@@ -2430,7 +2430,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "sinh nhật",
+                    vi: "sinh nhật",
                     hv: "BÀN SINH NHẬT",
                     kanji: "誕生日",
                     hira: "たんじょうび",
@@ -2441,7 +2441,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tàu thường (dừng cả ở các ga lẻ)",
+                    vi: "tàu thường (dừng cả ở các ga lẻ)",
                     hv: "PHỔ THÔNG",
                     kanji: "普通",
                     hira: "ふつう",
@@ -2452,7 +2452,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tàu tốc hành",
+                    vi: "tàu tốc hành",
                     hv: "CẤP HÀNH",
                     kanji: "急行",
                     hira: "きゅうこう",
@@ -2463,7 +2463,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tàu tốc hành đặc biệt",
+                    vi: "tàu tốc hành đặc biệt",
                     hv: "ĐẶC CẤP",
                     kanji: "特急",
                     hira: "とっきゅう",
@@ -2474,7 +2474,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "năm nay",
+                    vi: "năm nay",
                     hv: "KIM NIÊN",
                     kanji: "今年",
                     hira: "ことし",
@@ -2485,7 +2485,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "năm sau",
+                    vi: "năm sau",
                     hv: "LAI NIÊN",
                     kanji: "来年",
                     hira: "らいねん",
@@ -2496,7 +2496,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tháng 1",
+                    vi: "tháng 1",
                     hv: "NHẤT NGUYỆT",
                     kanji: "一月",
                     hira: "いちがつ",
@@ -2507,7 +2507,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tháng mấy",
+                    vi: "tháng mấy",
                     hv: "HÀ NGUYỆT",
                     kanji: "何月",
                     hira: "なんがつ",
@@ -2518,7 +2518,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "trường học",
+                    vi: "trường học",
                     hv: "HỌC HIỆU",
                     kanji: "学校",
                     hira: "がっこう",
@@ -2529,7 +2529,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "ga, nhà ga",
+                    vi: "ga, nhà ga",
                     hv: "DỊCH",
                     kanji: "駅",
                     hira: "えき",
@@ -2540,7 +2540,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "ngày mấy, ngày bao nhiêu, mấy ngày, bao nhiêu ngày",
+                    vi: "ngày mấy, ngày bao nhiêu, mấy ngày, bao nhiêu ngày",
                     hv: "HÀ NHẬT",
                     kanji: "何日",
                     hira: "なんにち",
@@ -2553,7 +2553,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "bao giờ, khi nào",
+                    vi: "bao giờ, khi nào",
                     hv: "",
                     kanji: "",
                     hira: "いつ",
@@ -2564,7 +2564,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "Không có gì",
+                    vi: "Không có gì",
                     hv: "",
                     kanji: "",
                     hira: "どういたしまして",
@@ -2576,7 +2576,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "xe buýt",
+                    vi: "xe buýt",
                     kata: "バス",
                     kind: "noun",
                     en: "bus",
@@ -2584,7 +2584,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "tắc-xi",
+                    vi: "tắc-xi",
                     kata: "タクシー",
                     kind: "noun",
                     en: "taxi",
@@ -2592,7 +2592,7 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vn: "siêu thị",
+                    vi: "siêu thị",
                     kata: "スーパー",
                     kind: "noun",
                     en: "supermarket",

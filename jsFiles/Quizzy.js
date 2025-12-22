@@ -53,12 +53,19 @@ Quizzy.prototype._addingCHild = function (op = {}) {
     return temp;
 };
 
-// {
+// {  QA
 //     question: `where is cat ?`,
 //     showAnswer: `me`,
 //     options: [`magne`, `magnus`, `slowie`, `me`, `lichi`],
 // },
-Quizzy.prototype._render = function (QA, mode = `checkbox`) {
+Quizzy.prototype._render = function (
+    QA,
+    userOptions = {
+        submitBtnHtml: ``,
+        deleteBtnHtml: ``,
+    },
+    mode = `checkbox`
+) {
     if (!QA) return console.error(`Quizzy : QA list is invalid`);
     if (![`radio`, `checkbox`].includes(mode))
         return console.error(`Quizzy : mode is invalid`);
@@ -110,7 +117,9 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
             parent: quizBlock,
             tagname: `button`,
             attribute: { "data-order": i, class: this.classNames.quizDelete },
-            html: `delete`,
+            html: userOptions.deleteBtnHtml
+                ? userOptions.deleteBtnHtml
+                : `Delete`,
             addClickEvent: (e) => {
                 e.preventDefault();
                 const order = e.target.getAttribute(`data-order`);
@@ -169,7 +178,7 @@ Quizzy.prototype._render = function (QA, mode = `checkbox`) {
         parent: this.container,
         tagname: `button`,
         attribute: { class: this.classNames.quizSubmit },
-        html: `Submit`,
+        html: userOptions.submitBtnHtml ? userOptions.submitBtnHtml : `Submit`,
         addClickEvent: (e) => {
             e.preventDefault();
             this._disableClick();
@@ -188,6 +197,7 @@ Quizzy.prototype._disableClick = function () {
         };
     });
 };
+
 Quizzy.prototype._hiddenDelete = function () {
     this.deleteNodeList.forEach(function (value) {
         value.hidden = true;
@@ -212,7 +222,7 @@ Quizzy.prototype._showCorrectAnswer = function () {
     this.score = { total: this.QA.length, passed: score };
 };
 
-Quizzy.prototype._erase = function () {
+Quizzy.prototype._destroy = function () {
     this.answerOptionsNodeList.forEach((value) => {
         value.onclick = null;
     });
