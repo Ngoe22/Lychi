@@ -21,7 +21,6 @@ function quizRenderProcess(QA) {
         deleteBtnHtml: lh(`quiz`, `delete`),
     });
     lychiFilter.container.classList.add(`hidden`);
-    langEditBoard.classList.add(`hidden`);
     lychiNoteModal.open();
     lychiNoteModal.setContent(lh(`noteModal`, `html`));
     lychiNoteModal._footerButtons.forEach((btn) => {
@@ -109,7 +108,7 @@ const lychiFilter = new Filterzy(
             //
             if (output) {
                 let QA = testFilterToQA.getOutput(vocabData, output);
-
+                // console.log(QA);
                 if (!QA) {
                     allowLessVocabModal.open();
 
@@ -148,14 +147,11 @@ const lychiFilter = new Filterzy(
 //  QUIZ
 
 const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
-    // console.log(output);
     lychiQuiz.SubmitBtn.classList.add(`hidden`);
-    // showResultsScore.innerHTML = `${output.passed} / ${output.total} `;
     scrollToTopBtn.classList.remove(`hidden`);
-
-    showResultsRender(output);
     showResults.classList.remove(`hidden`);
-    // showResults.hidden = false;
+    showResultsRender(output);
+
     document.body.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -176,30 +172,10 @@ scrollToTopBtn.onclick = function () {
 
 // ========================= Handle language  ===========================
 
-const langEditBoard = document.querySelector(`.lang-bar`);
-const langEditVi = document.querySelector(`[data-langedit="vi"]`);
-const langEditEn = document.querySelector(`[data-langedit="en"]`);
-
-langEditVi.addEventListener(`click`, reRenderFilter);
-langEditEn.addEventListener(`click`, reRenderFilter);
-
-function reRenderFilter(e) {
-    const langBar = e.target.closest(".lang-bar__item");
-    const value = langBar.getAttribute(`data-langedit`);
-    document.documentElement.setAttribute(`lang`, value);
-    lychiFilter._destroy();
-    lychiFilter._render(filterFormGiver(), {
-        cancelBtn: lh(`filter`, `cancelBtn`),
-        submitBtn: lh(`filter`, `submitBtn`),
-    });
-    setLanguage(value);
-}
-// console.log(allowLessVocabModal_modalFooter);
-
 // ==================================
+// Show results
 
 const showResults = document.querySelector(`.show-results`);
-
 function showResultsRender(results) {
     showResults.innerHTML = `
 <p class="show-results__score">  ${results.passed} / ${results.total} </p>
@@ -221,4 +197,55 @@ function showResultsRender(results) {
 
         lychiQuiz._destroy();
     };
+}
+
+// ==================================
+// Setting
+
+const userSetting = document.querySelector(`.user-setting`);
+userSetting.querySelector(`.set-language`).onclick = () => {
+    langEdit.classList.toggle(`hidden`);
+};
+
+const fullScrBtn = userSetting.querySelector(`.set-fullscreen`);
+fullScrBtn.onclick = () => {
+    if (!fullScrBtn.classList.contains(`on`)) {
+        document.documentElement.requestFullscreen();
+        fullScrBtn.classList.add(`on`);
+    } else {
+        document.exitFullscreen();
+        fullScrBtn.classList.remove(`on`);
+    }
+};
+// language
+
+const langSettingList = [
+    { lang: `vi`, imgLink: `./assets/icon/vietnam.png` },
+    { lang: `en`, imgLink: `./assets/icon/united-kingdom.png` },
+];
+
+const langEdit = document.createElement(`div`);
+langEdit.className = `langSet hidden`;
+for (let i of langSettingList) {
+    langEdit.insertAdjacentHTML(
+        "beforeend",
+        `   <button class="langSet__item " data-langset="${i.lang}">
+                <img src="${i.imgLink}"  alt="" />
+            </button> `
+    );
+    const index = langEdit.children.length - 1;
+    langEdit.children[index].onclick = reRenderFilter;
+}
+userSetting.querySelector(`.set-language`).append(langEdit);
+//
+function reRenderFilter(e) {
+    const langBar = e.target.closest(".langSet__item");
+    const value = langBar.getAttribute(`data-langset`);
+    document.documentElement.setAttribute(`lang`, value);
+    lychiFilter._destroy();
+    lychiFilter._render(filterFormGiver(), {
+        cancelBtn: lh(`filter`, `cancelBtn`),
+        submitBtn: lh(`filter`, `submitBtn`),
+    });
+    setLanguage(value);
 }

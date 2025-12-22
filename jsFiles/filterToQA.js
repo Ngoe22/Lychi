@@ -42,6 +42,7 @@ filterToQA.prototype._getVocab = function (database, condition) {
             this.vocabOutput[j].push(...database[level][i][j]);
         }
     }
+
     this.totalVocab = Object.values(this.vocabOutput).reduce(
         (sum, arr) => sum + (arr?.length ?? 0),
         0
@@ -121,7 +122,6 @@ filterToQA.prototype._waterFill = function (input, total) {
             remain: Math.max(remain, 0),
             active: remain > 0,
         };
-
         elements.push(item);
 
         if (item.active) {
@@ -143,7 +143,6 @@ filterToQA.prototype._waterFill = function (input, total) {
             if (!item.active) continue;
 
             const taken = Math.min(item.remain, share);
-
             item.given += taken;
             item.remain -= taken;
             missing -= taken;
@@ -153,12 +152,12 @@ filterToQA.prototype._waterFill = function (input, total) {
                 activeCount--;
             }
 
-            if (missing === 0) break;
+            console.log(item.name, item.remain, missing, extra);
+            if (missing <= 0 && extra <= 0) break;
         }
-
         // phân phối phần dư
-        if (missing === 0 && extra > 0) {
-            missing = extra;
+        if (missing <= 0 && extra > 0) {
+            missing += extra;
             extra = 0;
         }
     }
@@ -190,6 +189,8 @@ filterToQA.prototype.getOutput = function (database, condition) {
     let lang = document.documentElement.getAttribute(`lang`);
     // if out of vocab , get all  , no need  share handle
 
+    console.log(vocab);
+
     if (!vocab) return;
 
     if (vocab.totalQA < vocab.totalVocab) {
@@ -200,6 +201,7 @@ filterToQA.prototype.getOutput = function (database, condition) {
             }
         }
         amounts = this._waterFill(amounts, vocab.totalQA);
+
         var kanjiVocabList = this._getRandomFromArray(
             vocab.kanji,
             amounts.kanji
