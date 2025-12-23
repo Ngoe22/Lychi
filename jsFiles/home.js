@@ -18,3 +18,12 @@ function landingPageRender() {
     memorySection.innerHTML = lh(`landing`, `articleHtml`);
 }
 landingPageRender();
+
+const learnMoreBtn = memorySection.querySelector(`.card-learn-more-btn`);
+learnMoreBtn.onclick = (e) => {
+    learnMoreBtn.onclick = null;
+    memorySection.classList.remove(`hide-half`);
+    learnMoreBtn.closest(`.card-learn-more`).remove();
+};
+
+

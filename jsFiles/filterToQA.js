@@ -167,9 +167,6 @@ filterToQA.prototype._waterFill = function (input, total) {
         output[keys[idx]] = el.given;
     });
 
-    // console.log("_handleAOQ", output);
-    // {hiragana: 18, kanji: 17, katakana: 15}
-
     return output;
 };
 
@@ -183,7 +180,11 @@ filterToQA.prototype._mixArray = function (array) {
     }
 };
 
-filterToQA.prototype.getOutput = function (database, condition) {
+filterToQA.prototype.getOutput = function (
+    database,
+    condition,
+    dataType = `vocab`
+) {
     const vocab = this._getVocab(database, condition);
     let lang = document.documentElement.getAttribute(`lang`);
     // if out of vocab , get all  , no need  share handle
@@ -198,7 +199,6 @@ filterToQA.prototype.getOutput = function (database, condition) {
             }
         }
         amounts = this._waterFill(amounts, vocab.totalQA);
-
         var kanjiVocabList = this._getRandomFromArray(
             vocab.kanji,
             amounts.kanji
@@ -236,12 +236,9 @@ filterToQA.prototype.getOutput = function (database, condition) {
     const output = [...kanjiList, ...hiraganaList, ...katakanaList];
     this._mixArray(output);
 
-    // console.log(output);
-
     return output;
     //
-    // let options = {};
-    // const QA = this._vocabToQA(database, {});
+
 };
 
 // ========================================

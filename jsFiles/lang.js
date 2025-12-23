@@ -169,7 +169,7 @@ const i18n = {
                                 rằng đây là thông tin quan trọng sống còn.
                             </p>
 
-                            <h3 style="font-size: 1.8rem; margin-bottom: 10px">
+                            <h3 style="font-size: 1.8rem; margin: 20px 0 25px">
                                 1. Liên kết & Kể chuyện (Mã hóa)
                             </h3>
                             <p class="card-text">
@@ -179,7 +179,7 @@ const i18n = {
                             </p>
                             <div
                                 class="example-box"
-                                style="margin-bottom: 15px"
+                                style="margin: 20px 0 25px"
                             >
                                 <span class="example-title"
                                     >🗿 Ví dụ đời sống:</span
@@ -191,7 +191,7 @@ const i18n = {
                                 khoảng cách hàng cây số.
                             </div>
 
-                            <h3 style="font-size: 1.8rem; margin-bottom: 10px">
+                            <h3 style="font-size: 1.8rem; margin: 20px 0 25px">
                                 2. Tạo áp lực truy xuất (Active Recall)
                             </h3>
                             <p class="card-text">
@@ -213,7 +213,9 @@ const i18n = {
                                 việc phụ thuộc hoàn toàn vào công cụ.
                             </div>
                         </div>
-                    
+                    <div class="card-learn-more">
+                        <button class="card-learn-more-btn">Xem thêm</button>
+                    </div>
             
             
             `,
@@ -265,7 +267,7 @@ const i18n = {
 
         landing: {
             nextBtn: `Let's go`,
-            or: ` ─────── or  ───────`,
+            or: ` ─────── or learn more ───────`,
             articleHtml: `
             <h1 class="section-title">SECRETS OF THE PRIMAL BRAIN</h1>
 
@@ -326,16 +328,16 @@ const i18n = {
                 <strong>The Principle:</strong> "Trick" the brain into believing this information is critical for survival.
             </p>
 
-            <h3 style="font-size: 1.1rem; color: var(--primary-color);">1. Association & Storytelling (Encoding)</h3>
+            <h3 style="font-size: 1.6rem; margin: 20px 0 25px; color: var(--primary-color);">1. Association & Storytelling (Encoding)</h3>
             <p class="card-text">
                 The human brain didn't evolve to read text; it evolved to remember spaces and events. Anchor new knowledge to old things you already know.
             </p>
-            <div class="example-box" style="margin-bottom: 15px;">
+            <div class="example-box" style="margin: 20px 0 25px;">
                 <span class="example-title">🗿 Real-life Example:</span>
                 You meet a stranger named <strong>"Leo"</strong>. Instead of muttering his name, imagine him with a thick mane, roaring like a <span class="highlight">Lion</span>. That visual image sticks instantly, whereas the abstract sound "Leo" fades.
             </div>
 
-            <h3 style="font-size: 1.1rem; color: var(--primary-color);">2. Active Recall (The Retrieval Struggle)</h3>
+            <h3 style="font-size: 1.6rem; margin: 20px 0 15px; color: var(--primary-color);">2. Active Recall (The Retrieval Struggle)</h3>
             <p class="card-text">
                 Instead of just inputting (reading), force yourself to output (recall). The "struggle" to find the answer reinforces the neural pathway.
             </p>
@@ -343,7 +345,12 @@ const i18n = {
                 <span class="example-title">🏹 Survival Example:</span>
                 When lost in the woods, instead of checking the map immediately, ask yourself: <em>"Did I turn at the big oak tree or the river?"</em> forcing your brain to remember the path makes your navigation skills far sharper than relying on a tool.
             </div>
-        </div>`,
+        </div>
+        <div class="card-learn-more">
+            <button class="card-learn-more-btn">Learn more</button>
+        </div>
+        
+        `,
         },
     },
 };

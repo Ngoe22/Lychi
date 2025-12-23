@@ -61,8 +61,8 @@ lychiNoteModal.addFooterButton("OK", "lychiModal-continue", function () {
 
 // ====================================================
 //  FILTER
-
-filterFormGiver = function () {
+//  Vocab
+filterFormGiver1 = function () {
     const filterForm = [
         {
             inputType: `radio`,
@@ -111,10 +111,45 @@ filterFormGiver = function () {
     ];
     return filterForm;
 };
+
+filterFormGiver2 = function () {
+    const filterForm = [
+        {
+            inputType: `radio`,
+            title: `JLPT`,
+            name: `level`,
+            value: [`n5`],
+            valueShow: [`N5`],
+            required: true,
+            radioDefault: `n5`,
+        },
+        {
+            inputType: `checkbox`,
+            title: lh(`filter`, `lesson`),
+            name: `lesson`,
+            value: [
+                `lesson1`,
+                `lesson2`,
+                `lesson3`,
+                `lesson4`,
+                `lesson5`,
+                `lesson6`,
+                `lesson7`,
+                `lesson8`,
+                `lesson9`,
+                `lesson10`,
+            ],
+            valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
+            required: true,
+        },
+    ];
+    return filterForm;
+};
+
 //
 const lychiFilter = new Filterzy(
     `#filterzy`,
-    filterFormGiver(),
+    filterFormGiver1(),
     (functions = {
         onSubmit: function (output) {
             //
