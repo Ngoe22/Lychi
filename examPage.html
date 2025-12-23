@@ -21,7 +21,9 @@
             <header class="header">
                 <img src="./assets/icon/lichee-removebg-preview.png" alt="" />
             </header>
+
             <div class="body-wrap">
+                <div class="show-results hidden"></div>
                 <div class="user-setting">
                     <div class="user-setting__item set-language">
                         <img
@@ -33,20 +35,30 @@
                         <img src="./assets/icon/lightbulb-regular.svg" alt="" />
                     </div>
                 </div>
-
-                <div class="article">
-                    <a class="examLink" href="./examPage.html"></a>
-                    <p class="sub-text"></p>
-
-                    <div class="memory-section"></div>
-                </div>
+                <!--  -->
+                <form id="filterzy" class="filterzy"></form>
+                <form id="quizBoard" class="quizBoard"></form>
+                <button class="scrollToHead">
+                    <img
+                        src="./assets/icon/arrow-up-wide-short-svgrepo-com.svg"
+                        alt=""
+                    />
+                </button>
             </div>
+            <!--  -->
         </div>
+
         <!-- JS files -->
         <!-- <script src="https://ngoe22.github.io/popzyOfS/popzyOfS.min.js"></script> -->
         <script src="./jsFiles/lang.js"></script>
+        <script src="./jsFiles/letter.js"></script>
+        <script src="./jsFiles/vocab.js"></script>
+        <script src="./jsFiles/Filterzy.js"></script>
+        <script src="./jsFiles/Quizzy.js"></script>
+        <script src="./jsFiles/Popzy.js"></script>
+        <script src="./jsFiles/filterToQA.js"></script>
         <script src="./jsFiles/userSetting.js"></script>
-        <script src="./jsFiles/home.js"></script>
+        <script src="./jsFiles/main.js"></script>
     </body>
 </html>
 

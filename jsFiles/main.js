@@ -28,6 +28,7 @@ function quizRenderProcess(QA) {
             btn.textContent = lh(`noteModal`, `understand`);
         }
     });
+    userSetting.classList.add(`hidden`);
 }
 
 allowLessVocabModal.addFooterButton(
@@ -76,8 +77,19 @@ filterFormGiver = function () {
             inputType: `checkbox`,
             title: lh(`filter`, `lesson`),
             name: `lesson`,
-            value: [`lesson1`, `lesson2`, `lesson3`, `lesson4`, `lesson5`],
-            valueShow: [`1`, `2`, `3`, `4`, `5`],
+            value: [
+                `lesson1`,
+                `lesson2`,
+                `lesson3`,
+                `lesson4`,
+                `lesson5`,
+                `lesson6`,
+                `lesson7`,
+                `lesson8`,
+                `lesson9`,
+                `lesson10`,
+            ],
+            valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
             required: true,
         },
         {
@@ -150,9 +162,10 @@ const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
     lychiQuiz.SubmitBtn.classList.add(`hidden`);
     scrollToTopBtn.classList.remove(`hidden`);
     showResults.classList.remove(`hidden`);
+
     showResultsRender(output);
 
-    document.body.scrollIntoView({
+    header.scrollIntoView({
         behavior: "smooth",
         block: "start",
     });
@@ -161,10 +174,11 @@ const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
 // =================================================
 //  PAGE
 
+const header = document.querySelector(`.header`);
 const scrollToTopBtn = document.querySelector(`.scrollToHead`);
 scrollToTopBtn.classList.add(`hidden`);
 scrollToTopBtn.onclick = function () {
-    document.body.scrollIntoView({
+    header.scrollIntoView({
         behavior: "smooth",
         block: "start",
     });
@@ -182,7 +196,7 @@ function showResultsRender(results) {
 <p class="show-results__messages"></p>
 <div class="show-results__action">
     <button class="show-results__clear">${lh(`showResults`, `replay`)}</button>
-    <a class="show-results__backHomepage" href="">
+    <a class="show-results__backHomepage" href="./index.html">
         ${lh(`showResults`, `rest`)}
     </a>
 </div>
@@ -193,59 +207,33 @@ function showResultsRender(results) {
         showResults.classList.add(`hidden`);
         scrollToTopBtn.classList.add(`hidden`);
         lychiFilter.container.classList.remove(`hidden`);
-        langEditBoard.classList.remove(`hidden`);
-
+        // langEdit.classList.remove(`hidden`);
+        userSetting.classList.remove(`hidden`);
         lychiQuiz._destroy();
     };
 }
 
 // ==================================
-// Setting
 
-const userSetting = document.querySelector(`.user-setting`);
-userSetting.querySelector(`.set-language`).onclick = () => {
-    langEdit.classList.toggle(`hidden`);
-};
+// Language
 
-const fullScrBtn = userSetting.querySelector(`.set-fullscreen`);
-fullScrBtn.onclick = () => {
-    if (!fullScrBtn.classList.contains(`on`)) {
-        document.documentElement.requestFullscreen();
-        fullScrBtn.classList.add(`on`);
-    } else {
-        document.exitFullscreen();
-        fullScrBtn.classList.remove(`on`);
-    }
-};
-// language
+for (let i of langEdit.children) {
+    console.log(i);
 
-const langSettingList = [
-    { lang: `vi`, imgLink: `./assets/icon/vietnam.png` },
-    { lang: `en`, imgLink: `./assets/icon/united-kingdom.png` },
-];
-
-const langEdit = document.createElement(`div`);
-langEdit.className = `langSet hidden`;
-for (let i of langSettingList) {
-    langEdit.insertAdjacentHTML(
-        "beforeend",
-        `   <button class="langSet__item " data-langset="${i.lang}">
-                <img src="${i.imgLink}"  alt="" />
-            </button> `
-    );
-    const index = langEdit.children.length - 1;
-    langEdit.children[index].onclick = reRenderFilter;
+    i.onclick = reRenderFilter;
 }
-userSetting.querySelector(`.set-language`).append(langEdit);
+
 //
 function reRenderFilter(e) {
     const langBar = e.target.closest(".langSet__item");
     const value = langBar.getAttribute(`data-langset`);
     document.documentElement.setAttribute(`lang`, value);
+
     lychiFilter._destroy();
     lychiFilter._render(filterFormGiver(), {
         cancelBtn: lh(`filter`, `cancelBtn`),
         submitBtn: lh(`filter`, `submitBtn`),
     });
+
     setLanguage(value);
 }

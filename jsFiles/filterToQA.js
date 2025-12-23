@@ -152,7 +152,6 @@ filterToQA.prototype._waterFill = function (input, total) {
                 activeCount--;
             }
 
-            console.log(item.name, item.remain, missing, extra);
             if (missing <= 0 && extra <= 0) break;
         }
         // phân phối phần dư
@@ -188,8 +187,6 @@ filterToQA.prototype.getOutput = function (database, condition) {
     const vocab = this._getVocab(database, condition);
     let lang = document.documentElement.getAttribute(`lang`);
     // if out of vocab , get all  , no need  share handle
-
-    console.log(vocab);
 
     if (!vocab) return;
 
