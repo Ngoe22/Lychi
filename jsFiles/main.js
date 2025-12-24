@@ -32,6 +32,7 @@ function quizRenderProcess(QA) {
 }
 
 allowLessVocabModal.addFooterButton(
+    // click allow or not
     lh(`allowLessVocabModal`, `continue`),
     "lychiModal-continue",
     (e) => {
@@ -142,6 +143,14 @@ filterFormGiver2 = function () {
             valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
             required: true,
         },
+        {
+            inputType: `radio`,
+            title: lh(`filter`, `AOQ`),
+            name: `AOQ`,
+            value: [`20`, `30`, `50`],
+            valueShow: [`20`, `30`, `50`],
+            required: true,
+        },
     ];
     return filterForm;
 };
@@ -154,27 +163,12 @@ const lychiFilter = new Filterzy(
         onSubmit: function (output) {
             //
             if (output) {
+                //  if current = vocab , else grammry
+                // let QA = testFilterToQA.getOutput(vocabData, output);
                 let QA = testFilterToQA.getOutput(vocabData, output);
                 // console.log(QA);
                 if (!QA) {
-                    allowLessVocabModal.open();
-
-                    allowLessVocabModal.setContent(
-                        lh(`allowLessVocabModal`, `text`)
-                    );
-
-                    allowLessVocabModal._footerButtons.forEach((btn) => {
-                        if (btn.getAttribute(`class`) === `lychiModal-cancel`) {
-                            btn.textContent = lh(`allowLessVocabModal`, `stay`);
-                        } else if (
-                            btn.getAttribute(`class`) === `lychiModal-continue`
-                        ) {
-                            btn.textContent = lh(
-                                `allowLessVocabModal`,
-                                `continue`
-                            );
-                        }
-                    });
+                    renderAllowLessQaBtn();
                     return;
                 }
                 quizRenderProcess(QA);
@@ -190,6 +184,18 @@ const lychiFilter = new Filterzy(
     }
 );
 
+function renderAllowLessQaBtn() {
+    allowLessVocabModal.open();
+    allowLessVocabModal.setContent(lh(`allowLessVocabModal`, `text`));
+    allowLessVocabModal._footerButtons.forEach((btn) => {
+        if (btn.getAttribute(`class`) === `lychiModal-cancel`) {
+            btn.textContent = lh(`allowLessVocabModal`, `stay`);
+        } else if (btn.getAttribute(`class`) === `lychiModal-continue`) {
+            btn.textContent = lh(`allowLessVocabModal`, `continue`);
+        }
+    });
+}
+
 // ====================================================
 //  QUIZ
 
@@ -197,9 +203,7 @@ const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
     lychiQuiz.SubmitBtn.classList.add(`hidden`);
     scrollToTopBtn.classList.remove(`hidden`);
     showResults.classList.remove(`hidden`);
-
     showResultsRender(output);
-
     header.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -253,8 +257,6 @@ function showResultsRender(results) {
 // Language
 
 for (let i of langEdit.children) {
-    console.log(i);
-
     i.onclick = reRenderFilter;
 }
 

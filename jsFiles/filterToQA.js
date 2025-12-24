@@ -189,56 +189,59 @@ filterToQA.prototype.getOutput = function (
     let lang = document.documentElement.getAttribute(`lang`);
     // if out of vocab , get all  , no need  share handle
 
-    if (!vocab) return;
+    if (dataType === `vocab`) {
+        if (!vocab) return;
 
-    if (vocab.totalQA < vocab.totalVocab) {
-        let amounts = {};
-        for (let [key, value] of Object.entries(vocab)) {
-            if (Array.isArray(value)) {
-                amounts[key] = value.length;
+        if (vocab.totalQA < vocab.totalVocab) {
+            let amounts = {};
+            for (let [key, value] of Object.entries(vocab)) {
+                if (Array.isArray(value)) {
+                    amounts[key] = value.length;
+                }
             }
+            amounts = this._waterFill(amounts, vocab.totalQA);
+            var kanjiVocabList = this._getRandomFromArray(
+                vocab.kanji,
+                amounts.kanji
+            );
+            var hiraganaVocabList = this._getRandomFromArray(
+                vocab.hiragana,
+                amounts.hiragana
+            );
+            var katakanaVocabList = this._getRandomFromArray(
+                vocab.katakana,
+                amounts.katakana
+            );
+        } else {
+            var kanjiVocabList = vocab.kanji;
+            var hiraganaVocabList = vocab.hiragana;
+            var katakanaVocabList = vocab.katakana;
         }
-        amounts = this._waterFill(amounts, vocab.totalQA);
-        var kanjiVocabList = this._getRandomFromArray(
-            vocab.kanji,
-            amounts.kanji
-        );
-        var hiraganaVocabList = this._getRandomFromArray(
-            vocab.hiragana,
-            amounts.hiragana
-        );
-        var katakanaVocabList = this._getRandomFromArray(
-            vocab.katakana,
-            amounts.katakana
-        );
-    } else {
-        var kanjiVocabList = vocab.kanji;
-        var hiraganaVocabList = vocab.hiragana;
-        var katakanaVocabList = vocab.katakana;
+
+        var kanjiList = this._vocabToQA(kanjiVocabList, {
+            question: `kanji`,
+            showAnswer: `hira`,
+            other: HIRAGANA,
+        });
+        var hiraganaList = this._vocabToQA(hiraganaVocabList, {
+            question: lang,
+            showAnswer: `hira`,
+            other: HIRAGANA,
+        });
+        var katakanaList = this._vocabToQA(katakanaVocabList, {
+            question: lang,
+            showAnswer: `kata`,
+            other: KATAKANA,
+        });
+
+        const output = [...kanjiList, ...hiraganaList, ...katakanaList];
+        this._mixArray(output);
+
+        return output;
+        //
+    } else if (dataType === `grammarly`) {
     }
-
-    var kanjiList = this._vocabToQA(kanjiVocabList, {
-        question: `kanji`,
-        showAnswer: `hira`,
-        other: HIRAGANA,
-    });
-    var hiraganaList = this._vocabToQA(hiraganaVocabList, {
-        question: lang,
-        showAnswer: `hira`,
-        other: HIRAGANA,
-    });
-    var katakanaList = this._vocabToQA(katakanaVocabList, {
-        question: lang,
-        showAnswer: `kata`,
-        other: KATAKANA,
-    });
-
-    const output = [...kanjiList, ...hiraganaList, ...katakanaList];
-    this._mixArray(output);
-
-    return output;
     //
-
 };
 
 // ========================================
