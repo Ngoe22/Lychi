@@ -169,6 +169,11 @@ Popzy.prototype._handleEscapeKey = function (e) {
 Popzy.prototype._onTransitionEnd = function (callback) {
     const handler = (e) => {
         if (e.propertyName !== "transform") return;
+        //
+        // console.log(e);
+        // console.log(this._backdrop);
+        // //
+        // if (!this._backdrop) return;
         this._backdrop.removeEventListener("transitionend", handler);
         if (typeof callback === "function") callback();
     };

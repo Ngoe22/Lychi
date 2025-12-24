@@ -136,7 +136,7 @@ html {
     --show-answer: rgba(212, 212, 212, 0.527);
     --example-title: #8a6d3b;
     --accent-color: rgb(253, 164, 109);
-        --learn-more-bg: linear-gradient(to top, #ffffff, #ffffff, transparent);
+    --learn-more-bg: linear-gradient(to top, #ffffff, #ffffff, transparent);
     --learn-more-shadow: 0 0 10px 10px #ffffff;
     --learn-more-btn-text: #e7e7e7;
     --learn-more-btn-bg: rgb(0, 0, 0);
@@ -250,7 +250,7 @@ body {
     background-color: transparent;
 }
 
-.filterzy,
+.filter--wraper,
 .show-results {
     position: relative;
     padding: 25px;
@@ -259,6 +259,28 @@ body {
     margin: 20px 0;
     background-color: var(--background);
 }
+
+.filter-tabs {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.filter-tab {
+    color: var(--textColor);
+    background-color: transparent;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-size: 1.8rem;
+}
+.filter-tab.active {
+    border-color: var(--textColor);
+}
+
+/*  */
+
 .filterzy {
     display: flex;
     flex-wrap: wrap;

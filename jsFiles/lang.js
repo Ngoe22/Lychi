@@ -7,6 +7,11 @@ const i18n = {
             cancelBtn: `Chọn lại`,
             submitBtn: `Làm bài`,
         },
+        
+        filterTabs: {
+            vocab: `tu vung`,
+            grammar: `ngu phap`,
+        },
 
         quiz: {
             submitBtn: `Nộp bài`,
@@ -230,6 +235,11 @@ const i18n = {
             submitBtn: `Submit`,
         },
 
+        filterTabs: {
+            vocab: `vocabulary`,
+            grammar: `grammarly`,
+        },
+
         quiz: {
             submitBtn: `Submit`,
             delete: `Delete`,
@@ -395,4 +405,8 @@ initTheme();
 
 function setTheme(theme) {
     localStorage.setItem("theme", theme);
+}
+
+function getHeaderLang() {
+    return document.documentElement.getAttribute(`lang`);
 }

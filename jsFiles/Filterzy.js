@@ -76,7 +76,7 @@ Filterzy.prototype._render = function (
         });
 
         data.value.forEach((innerValue, index) => {
-            let temp = this._addChild({
+            let labelNode = this._addChild({
                 parentNode: block,
                 htmlTag: `label`,
                 setAttribute: { class: this.userOPtions.filterLabel },
@@ -84,10 +84,10 @@ Filterzy.prototype._render = function (
             });
 
             if (data.radioDefault === innerValue) {
-                // temp.querySelector(`input`).checked = true;
-                let meow = temp.querySelector(`input`);
-                meow.checked = true;
-                meow.setAttribute(`data-checked-default`, `true`);
+                // labelNode.querySelector(`input`).checked = true;
+                let labelInput = labelNode.querySelector(`input`);
+                labelInput.checked = true;
+                labelInput.setAttribute(`data-checked-default`, `true`);
             }
         });
     });

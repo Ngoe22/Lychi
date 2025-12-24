@@ -44,12 +44,24 @@ allowLessVocabModal.addFooterButton(
     }
 );
 
+function renderAllowLessQaBtn() {
+    allowLessVocabModal.open();
+    allowLessVocabModal.setContent(lh(`allowLessVocabModal`, `text`));
+    allowLessVocabModal._footerButtons.forEach((btn) => {
+        if (btn.getAttribute(`class`) === `lychiModal-cancel`) {
+            btn.textContent = lh(`allowLessVocabModal`, `stay`);
+        } else if (btn.getAttribute(`class`) === `lychiModal-continue`) {
+            btn.textContent = lh(`allowLessVocabModal`, `continue`);
+        }
+    });
+}
+
 // ===========================  NOTE
 
 const lychiNoteModal = new Popzy({
     footer: true,
     content: ` `,
-    closeMethods: ["overlay", "button", "escape"],
+    closeMethods: [],
     cssClass: ["lychiExamNote"],
     onClose: function () {
         console.log();
@@ -61,111 +73,143 @@ lychiNoteModal.addFooterButton("OK", "lychiModal-continue", function () {
 });
 
 // ====================================================
-//  FILTER
-//  Vocab
-filterFormGiver1 = function () {
-    const filterForm = [
-        {
-            inputType: `radio`,
-            title: `JLPT`,
-            name: `level`,
-            value: [`n5`],
-            valueShow: [`N5`],
-            required: true,
-            radioDefault: `n5`,
-        },
-        {
-            inputType: `checkbox`,
-            title: lh(`filter`, `lesson`),
-            name: `lesson`,
-            value: [
-                `lesson1`,
-                `lesson2`,
-                `lesson3`,
-                `lesson4`,
-                `lesson5`,
-                `lesson6`,
-                `lesson7`,
-                `lesson8`,
-                `lesson9`,
-                `lesson10`,
-            ],
-            valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
-            required: true,
-        },
-        {
-            inputType: `checkbox`,
-            title: lh(`filter`, `letter`),
-            name: `letter`,
-            value: [`hiragana`, `katakana`, `kanji`],
-            valueShow: [`hiragana `, `katakana`, `kanji`],
-            required: true,
-        },
-        {
-            inputType: `radio`,
-            title: lh(`filter`, `AOQ`),
-            name: `AOQ`,
-            value: [`20`, `30`, `50`],
-            valueShow: [`20`, `30`, `50`],
-            required: true,
-        },
-    ];
-    return filterForm;
+//  FILTER tabs
+
+filterFormGiverList = {
+    current: `vocab`,
+    vocab: function () {
+        const filterForm = [
+            {
+                inputType: `radio`,
+                title: `JLPT`,
+                name: `level`,
+                value: [`n5`],
+                valueShow: [`N5`],
+                required: true,
+                radioDefault: `n5`,
+            },
+            {
+                inputType: `checkbox`,
+                title: lh(`filter`, `lesson`),
+                name: `lesson`,
+                value: [
+                    `lesson1`,
+                    `lesson2`,
+                    `lesson3`,
+                    `lesson4`,
+                    `lesson5`,
+                    `lesson6`,
+                    `lesson7`,
+                    `lesson8`,
+                    `lesson9`,
+                    `lesson10`,
+                ],
+                valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
+                required: true,
+            },
+            {
+                inputType: `checkbox`,
+                title: lh(`filter`, `letter`),
+                name: `letter`,
+                value: [`hiragana`, `katakana`, `kanji`],
+                valueShow: [`hiragana `, `katakana`, `kanji`],
+                required: true,
+            },
+            {
+                inputType: `radio`,
+                title: lh(`filter`, `AOQ`),
+                name: `AOQ`,
+                value: [`20`, `30`, `50`],
+                valueShow: [`20`, `30`, `50`],
+                required: true,
+            },
+        ];
+        return filterForm;
+    },
+    grammar: function () {
+        const filterForm = [
+            {
+                inputType: `radio`,
+                title: `JLPT`,
+                name: `level`,
+                value: [`n5`],
+                valueShow: [`N5`],
+                required: true,
+                radioDefault: `n5`,
+            },
+            {
+                inputType: `checkbox`,
+                title: lh(`filter`, `lesson`),
+                name: `lesson`,
+                value: [
+                    `lesson1`,
+                    `lesson2`,
+                    `lesson3`,
+                    `lesson4`,
+                    `lesson5`,
+                    `lesson6`,
+                    `lesson7`,
+                    `lesson8`,
+                    `lesson9`,
+                    `lesson10`,
+                ],
+                valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
+                required: true,
+            },
+            {
+                inputType: `radio`,
+                title: lh(`filter`, `AOQ`),
+                name: `AOQ`,
+                value: [`20`, `30`, `50`],
+                valueShow: [`20`, `30`, `50`],
+                required: true,
+            },
+        ];
+        return filterForm;
+    },
 };
 
-filterFormGiver2 = function () {
-    const filterForm = [
-        {
-            inputType: `radio`,
-            title: `JLPT`,
-            name: `level`,
-            value: [`n5`],
-            valueShow: [`N5`],
-            required: true,
-            radioDefault: `n5`,
-        },
-        {
-            inputType: `checkbox`,
-            title: lh(`filter`, `lesson`),
-            name: `lesson`,
-            value: [
-                `lesson1`,
-                `lesson2`,
-                `lesson3`,
-                `lesson4`,
-                `lesson5`,
-                `lesson6`,
-                `lesson7`,
-                `lesson8`,
-                `lesson9`,
-                `lesson10`,
-            ],
-            valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
-            required: true,
-        },
-        {
-            inputType: `radio`,
-            title: lh(`filter`, `AOQ`),
-            name: `AOQ`,
-            value: [`20`, `30`, `50`],
-            valueShow: [`20`, `30`, `50`],
-            required: true,
-        },
-    ];
-    return filterForm;
-};
+const filterTabs = document.querySelector(`.filter-tabs`);
 
+// render tabs
+function filterTabsRender() {
+    let lang = getHeaderLang();
+
+    for (let [key, value] of Object.entries(filterFormGiverList)) {
+        if (typeof value === `function`) {
+            var active = key === filterFormGiverList.current ? `active` : ``;
+            filterTabs.insertAdjacentHTML(
+                `beforeend`,
+                `
+                <button class="filter-tab ${active}" data-filter-tab="${key}">
+                    ${lh(`filterTabs`, key)}
+                </button>
+                
+                `
+            );
+            first = ``;
+        }
+    }
+}
+filterTabsRender();
+
+// ====================================================
+//  FILTERZY
 //
 const lychiFilter = new Filterzy(
     `#filterzy`,
-    filterFormGiver1(),
+    filterFormGiverList[filterFormGiverList.current](),
     (functions = {
         onSubmit: function (output) {
             //
             if (output) {
                 //  if current = vocab , else grammry
                 // let QA = testFilterToQA.getOutput(vocabData, output);
-                let QA = testFilterToQA.getOutput(vocabData, output);
+                let QA = testFilterToQA.getOutput(
+                    vocabData,
+                    output,
+                    filterFormGiverList.current
+                );
                 // console.log(QA);
                 if (!QA) {
                     renderAllowLessQaBtn();
@@ -184,18 +228,6 @@ const lychiFilter = new Filterzy(
     }
 );
 
-function renderAllowLessQaBtn() {
-    allowLessVocabModal.open();
-    allowLessVocabModal.setContent(lh(`allowLessVocabModal`, `text`));
-    allowLessVocabModal._footerButtons.forEach((btn) => {
-        if (btn.getAttribute(`class`) === `lychiModal-cancel`) {
-            btn.textContent = lh(`allowLessVocabModal`, `stay`);
-        } else if (btn.getAttribute(`class`) === `lychiModal-continue`) {
-            btn.textContent = lh(`allowLessVocabModal`, `continue`);
-        }
-    });
-}
-
 // ====================================================
 //  QUIZ
 
@@ -211,7 +243,7 @@ const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
 });
 
 // =================================================
-//  PAGE
+//  PAGE Scroll
 
 const header = document.querySelector(`.header`);
 const scrollToTopBtn = document.querySelector(`.scrollToHead`);
@@ -267,7 +299,7 @@ function reRenderFilter(e) {
     document.documentElement.setAttribute(`lang`, value);
 
     lychiFilter._destroy();
-    lychiFilter._render(filterFormGiver(), {
+    lychiFilter._render(filterFormGiverList[filterFormGiverList.current](), {
         cancelBtn: lh(`filter`, `cancelBtn`),
         submitBtn: lh(`filter`, `submitBtn`),
     });
