@@ -2322,18 +2322,6 @@ const vocabData = {
                 {
                     level: "N5",
                     lesson: "5",
-                    vi: "ga, nhà ga",
-                    hv: "DỊCH",
-                    kanji: "駅",
-                    hira: "えき",
-                    pureKanji: true,
-                    kind: "noun",
-                    en: "station",
-                },
-
-                {
-                    level: "N5",
-                    lesson: "5",
                     vi: "máy bay",
                     hv: "PHI HÀNH CƠ",
                     kanji: "飛行機",
