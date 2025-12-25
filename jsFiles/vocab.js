@@ -3344,13 +3344,22 @@ const vocabData = {
                     en: "to call",
                 },
                 {
-                    vi: "cầu",
+                    vi: "cái cầu",
                     hira: "はし",
                     hv: `KIỀU`,
                     kanji: `橋`,
                     pureKanji: true,
                     kind: "noun",
                     en: "bridge",
+                },
+                {
+                    vi: "đôi đũa",
+                    hira: "はし",
+                    hv: `TRỨ`,
+                    kanji: `箸`,
+                    pureKanji: true,
+                    kind: "noun",
+                    en: "chopsticks",
                 },
                 {
                     vi: "cái kéo",
@@ -3486,6 +3495,14 @@ const vocabData = {
                     kind: "noun",
                     en: "bench",
                 },
+
+                {
+                    vi: "Đục lỗ giấy, bấm lỗ giấy",
+                    kata: "ベンチ",
+                    kind: "noun",
+                    en: "paper hole punch",
+                },
+
                 {
                     vi: "kim bấm",
                     kata: "ホッチキス",

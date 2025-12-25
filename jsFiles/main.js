@@ -245,6 +245,13 @@ function filterTabsInit() {
 }
 filterTabsInit();
 
+function filterTabLangRender() {
+    for (let i of filterTabList) {
+        let examType = i.getAttribute(`data-filter-tab`);
+        i.textContent = lh(`filterTabs`, examType);
+    }
+}
+
 // ====================================================
 //  FILTERZY
 //
@@ -348,6 +355,7 @@ for (let i of langEdit.children) {
         const value = langBar.getAttribute(`data-langset`);
         document.documentElement.setAttribute(`lang`, value);
         reRenderFilterContent();
+        filterTabLangRender();
         setLanguage(value);
     };
 }
