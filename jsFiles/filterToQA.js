@@ -73,13 +73,11 @@ filterToQA.prototype._grammarlyQA = function (database, condition) {
     let output = [];
     const grammarlyQaList = [];
     const AOQ = Number(condition.AOQ[0]);
-    console.log(condition);
+
     for (let i of condition.lesson) {
         grammarlyQaList.push(...database[condition.level][i]);
     }
     let isLess = grammarlyQaList.length < AOQ;
-
-    console.log(grammarlyQaList.length, AOQ, this.allowLessVocab);
 
     // check length
     if (isLess && !this.allowLessVocab) {
@@ -88,14 +86,13 @@ filterToQA.prototype._grammarlyQA = function (database, condition) {
     this.allowLessVocab = false;
 
     if (isLess) {
-        output = grammarlyQaList ;
+        output = grammarlyQaList;
         this._mixArray(output);
     } else {
-        output = this._getRandomFromArray(grammarlyQaList,AOQ);
+        output = this._getRandomFromArray(grammarlyQaList, AOQ);
     }
-    
-    return output;
 
+    return output;
 };
 
 filterToQA.prototype._vocabToQA = function (array, options) {
@@ -264,7 +261,7 @@ filterToQA.prototype.getOutput = function (
         });
 
         const output = [...kanjiList, ...hiraganaList, ...katakanaList];
-        
+
         this._mixArray(output);
 
         return output;

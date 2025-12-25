@@ -28,7 +28,10 @@ const i18n = {
             html: `
                 <p class="lychiExamNote__header">Hướng dẫn sử dụng !!</p>
                 <p class="lychiExamNote__h1">
-                    Nối các chữ cái hiragana & katakana thành từ vựng tương ứng
+                    Bài tập ngữ pháp : Chọn 1 đáp án tương ứng
+                </p>
+                <p class="lychiExamNote__h1">
+                    Bài tập từ vựng : Nối các chữ cái hiragana & katakana thành từ vựng tương ứng
                 </p>
 
                 <p class="lychiExamNote__subtitle">Lưu ý bài tập từ vựng</p>
@@ -237,7 +240,7 @@ const i18n = {
 
         filterTabs: {
             vocab: `Vocabulary`,
-            grammar: `Grammarly`,
+            grammar: `Grammar`,
         },
 
         quiz: {
@@ -255,7 +258,10 @@ const i18n = {
             html: `
                 <p class="lychiExamNote__header">Instructions for Use!!</p>
                 <p class="lychiExamNote__h1">
-                    Connect the letters hiragana & katakana to form the corresponding vocabulary words.
+                    Grammar exercise: Choose the correct answer.
+                </p>
+                <p class="lychiExamNote__h1">
+                    Vocab Exercise : Connect the letters hiragana & katakana to form the corresponding vocabulary words.
                 </p>
 
                 <p class="lychiExamNote__subtitle">Note the vocabulary exercises</p>

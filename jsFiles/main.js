@@ -281,7 +281,7 @@ const lychiFilter = new Filterzy(
             }
         },
         onCancel: function () {
-            console.log(`Filter Cancel`);
+            // console.log(`Filter Cancel`);
         },
     }),
     {
