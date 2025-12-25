@@ -19,7 +19,7 @@ const i18n = {
         },
 
         allowLessVocabModal: {
-            text: `Phạm vi ( bài học hoặc chữ ) bạn đã chọn đủ để đáp ứng số lượng câu hỏi `,
+            text: `Phạm vi ( bài học hoặc chữ ) bạn đã chọn không đủ để đáp ứng số lượng câu hỏi `,
             continue: `Tiếp tục`,
             stay: `Điều chỉnh`,
         },
