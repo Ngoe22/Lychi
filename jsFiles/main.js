@@ -15,22 +15,6 @@ allowLessVocabModal.addFooterButton(
     }
 );
 
-function quizRenderProcess(QA) {
-    lychiQuiz._render(QA, {
-        submitBtnHtml: lh(`quiz`, `submitBtn`),
-        deleteBtnHtml: lh(`quiz`, `delete`),
-    });
-    lychiFilter.container.classList.add(`hidden`);
-    lychiNoteModal.open();
-    lychiNoteModal.setContent(lh(`noteModal`, `html`));
-    lychiNoteModal._footerButtons.forEach((btn) => {
-        if (btn.getAttribute(`class`) === `lychiModal-continue`) {
-            btn.textContent = lh(`noteModal`, `understand`);
-        }
-    });
-    userSetting.classList.add(`hidden`);
-}
-
 allowLessVocabModal.addFooterButton(
     // click allow or not
     lh(`allowLessVocabModal`, `continue`),
@@ -38,9 +22,17 @@ allowLessVocabModal.addFooterButton(
     (e) => {
         allowLessVocabModal.close();
         testFilterToQA.allowLessVocab = true;
-        let QA = testFilterToQA.getOutput(vocabData, lychiFilter._getOutput());
+        let QA = testFilterToQA.getOutput(
+            filterFormGiverList[filterFormGiverList.current].dataFrom,
+            lychiFilter._getOutput(),
+            filterFormGiverList.current
+        );
         if (!QA) return;
-        quizRenderProcess(QA);
+        filterWraper.classList.add(`hidden`);
+        quizRenderProcess({
+            QA: QA,
+            mode: filterFormGiverList[filterFormGiverList.current].QAmode,
+        });
     }
 );
 
@@ -72,142 +64,200 @@ lychiNoteModal.addFooterButton("OK", "lychiModal-continue", function () {
     lychiNoteModal.close();
 });
 
+function quizRenderProcess(QA) {
+    lychiQuiz._render(QA, {
+        submitBtnHtml: lh(`quiz`, `submitBtn`),
+        deleteBtnHtml: lh(`quiz`, `delete`),
+    });
+    lychiFilter.container.classList.add(`hidden`);
+    lychiNoteModal.open();
+    lychiNoteModal.setContent(lh(`noteModal`, `html`));
+    lychiNoteModal._footerButtons.forEach((btn) => {
+        if (btn.getAttribute(`class`) === `lychiModal-continue`) {
+            btn.textContent = lh(`noteModal`, `understand`);
+        }
+    });
+    userSetting.classList.add(`hidden`);
+}
+
 // ====================================================
 //  FILTER tabs
 
 filterFormGiverList = {
     current: `vocab`,
-    vocab: function () {
-        const filterForm = [
-            {
-                inputType: `radio`,
-                title: `JLPT`,
-                name: `level`,
-                value: [`n5`],
-                valueShow: [`N5`],
-                required: true,
-                radioDefault: `n5`,
-            },
-            {
-                inputType: `checkbox`,
-                title: lh(`filter`, `lesson`),
-                name: `lesson`,
-                value: [
-                    `lesson1`,
-                    `lesson2`,
-                    `lesson3`,
-                    `lesson4`,
-                    `lesson5`,
-                    `lesson6`,
-                    `lesson7`,
-                    `lesson8`,
-                    `lesson9`,
-                    `lesson10`,
-                ],
-                valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
-                required: true,
-            },
-            {
-                inputType: `checkbox`,
-                title: lh(`filter`, `letter`),
-                name: `letter`,
-                value: [`hiragana`, `katakana`, `kanji`],
-                valueShow: [`hiragana `, `katakana`, `kanji`],
-                required: true,
-            },
-            {
-                inputType: `radio`,
-                title: lh(`filter`, `AOQ`),
-                name: `AOQ`,
-                value: [`20`, `30`, `50`],
-                valueShow: [`20`, `30`, `50`],
-                required: true,
-            },
-        ];
-        return filterForm;
+    vocab: {
+        func: function () {
+            const filterForm = [
+                {
+                    inputType: `radio`,
+                    title: `JLPT`,
+                    name: `level`,
+                    value: [`n5`],
+                    valueShow: [`N5`],
+                    required: true,
+                    radioDefault: `n5`,
+                },
+                {
+                    inputType: `checkbox`,
+                    title: lh(`filter`, `lesson`),
+                    name: `lesson`,
+                    value: [
+                        `lesson1`,
+                        `lesson2`,
+                        `lesson3`,
+                        `lesson4`,
+                        `lesson5`,
+                        `lesson6`,
+                        `lesson7`,
+                        `lesson8`,
+                        `lesson9`,
+                        `lesson10`,
+                    ],
+                    valueShow: [
+                        `1`,
+                        `2`,
+                        `3`,
+                        `4`,
+                        `5`,
+                        `6`,
+                        `7`,
+                        `8`,
+                        `9`,
+                        `10`,
+                    ],
+                    required: true,
+                },
+                {
+                    inputType: `checkbox`,
+                    title: lh(`filter`, `letter`),
+                    name: `letter`,
+                    value: [`hiragana`, `katakana`, `kanji`],
+                    valueShow: [`hiragana `, `katakana`, `kanji`],
+                    required: true,
+                },
+                {
+                    inputType: `radio`,
+                    title: lh(`filter`, `AOQ`),
+                    name: `AOQ`,
+                    value: [`20`, `30`, `50`],
+                    valueShow: [`20`, `30`, `50`],
+                    required: true,
+                },
+            ];
+            return filterForm;
+        },
+        dataFrom: vocabData,
+        QAmode: `checkbox`,
     },
-    grammar: function () {
-        const filterForm = [
-            {
-                inputType: `radio`,
-                title: `JLPT`,
-                name: `level`,
-                value: [`n5`],
-                valueShow: [`N5`],
-                required: true,
-                radioDefault: `n5`,
-            },
-            {
-                inputType: `checkbox`,
-                title: lh(`filter`, `lesson`),
-                name: `lesson`,
-                value: [
-                    `lesson1`,
-                    `lesson2`,
-                    `lesson3`,
-                    `lesson4`,
-                    `lesson5`,
-                    `lesson6`,
-                    `lesson7`,
-                    `lesson8`,
-                    `lesson9`,
-                    `lesson10`,
-                ],
-                valueShow: [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`],
-                required: true,
-            },
-            {
-                inputType: `radio`,
-                title: lh(`filter`, `AOQ`),
-                name: `AOQ`,
-                value: [`20`, `30`, `50`],
-                valueShow: [`20`, `30`, `50`],
-                required: true,
-            },
-        ];
-        return filterForm;
+    grammar: {
+        func: function () {
+            const filterForm = [
+                {
+                    inputType: `radio`,
+                    title: `JLPT`,
+                    name: `level`,
+                    value: [`n5`],
+                    valueShow: [`N5`],
+                    required: true,
+                    radioDefault: `n5`,
+                },
+                {
+                    inputType: `checkbox`,
+                    title: lh(`filter`, `lesson`),
+                    name: `lesson`,
+                    value: [
+                        `lesson1`,
+                        `lesson2`,
+                        `lesson3`,
+                        `lesson4`,
+                        `lesson5`,
+                        `lesson6`,
+                        `lesson7`,
+                        `lesson8`,
+                        `lesson9`,
+                        `lesson10`,
+                    ],
+                    valueShow: [
+                        `1`,
+                        `2`,
+                        `3`,
+                        `4`,
+                        `5`,
+                        `6`,
+                        `7`,
+                        `8`,
+                        `9`,
+                        `10`,
+                    ],
+                    required: true,
+                },
+                {
+                    inputType: `radio`,
+                    title: lh(`filter`, `AOQ`),
+                    name: `AOQ`,
+                    value: [`20`, `30`, `50`],
+                    valueShow: [`20`, `30`, `50`],
+                    required: true,
+                },
+            ];
+            return filterForm;
+        },
+        dataFrom: grammarlyData,
+        QAmode: `radio`,
     },
 };
 
+// --------------------
+const filterWraper = document.querySelector(`.filter--wraper`);
 const filterTabs = document.querySelector(`.filter-tabs`);
-
+filterTabList = [];
+function filterTabListClearActive() {
+    for (let i of filterTabList) {
+        i.classList.remove(`active`);
+    }
+}
 // render tabs
-function filterTabsRender() {
+function filterTabsInit() {
     let lang = getHeaderLang();
 
     for (let [key, value] of Object.entries(filterFormGiverList)) {
-        if (typeof value === `function`) {
+        if (typeof value.func === `function`) {
             var active = key === filterFormGiverList.current ? `active` : ``;
-            filterTabs.insertAdjacentHTML(
-                `beforeend`,
-                `
-                <button class="filter-tab ${active}" data-filter-tab="${key}">
-                    ${lh(`filterTabs`, key)}
-                </button>
-                
-                `
-            );
-            first = ``;
+
+            let newBtn = document.createElement(`button`);
+            filterTabs.append(newBtn);
+            newBtn.className = `filter-tab ${active} `;
+            newBtn.setAttribute(`data-filter-tab`, `${key}`);
+            newBtn.textContent = lh(`filterTabs`, key);
+
+            filterTabList.push(newBtn);
+
+            newBtn.onclick = (e) => {
+                filterTabListClearActive();
+                e.target.classList.add(`active`);
+                let examType = e.target.getAttribute(`data-filter-tab`);
+                filterFormGiverList.current = examType;
+                reRenderFilterContent();
+                // reRenderFilterContent(e);
+            };
         }
     }
 }
-filterTabsRender();
+filterTabsInit();
 
 // ====================================================
 //  FILTERZY
 //
 const lychiFilter = new Filterzy(
     `#filterzy`,
-    filterFormGiverList[filterFormGiverList.current](),
+    filterFormGiverList[filterFormGiverList.current].func(),
     (functions = {
-        onSubmit: function (output) {
+        onSubmit: function (filterOutput) {
             //
-            if (output) {
-                //  if current = vocab , else grammry
-                // let QA = testFilterToQA.getOutput(vocabData, output);
+            if (filterOutput) {
                 let QA = testFilterToQA.getOutput(
-                    vocabData,
-                    output,
+                    filterFormGiverList[filterFormGiverList.current].dataFrom,
+                    filterOutput,
                     filterFormGiverList.current
                 );
                 // console.log(QA);
@@ -215,7 +265,12 @@ const lychiFilter = new Filterzy(
                     renderAllowLessQaBtn();
                     return;
                 }
-                quizRenderProcess(QA);
+                filterWraper.classList.add(`hidden`);
+                quizRenderProcess({
+                    QA: QA,
+                    mode: filterFormGiverList[filterFormGiverList.current]
+                        .QAmode,
+                });
             }
         },
         onCancel: function () {
@@ -255,8 +310,6 @@ scrollToTopBtn.onclick = function () {
     });
 };
 
-// ========================= Handle language  ===========================
-
 // ==================================
 // Show results
 
@@ -280,29 +333,33 @@ function showResultsRender(results) {
         lychiFilter.container.classList.remove(`hidden`);
         // langEdit.classList.remove(`hidden`);
         userSetting.classList.remove(`hidden`);
+        filterWraper.classList.remove(`hidden`);
         lychiQuiz._destroy();
     };
 }
 
-// ==================================
+// // ========================= Handle language  ===========================
 
 // Language
 
 for (let i of langEdit.children) {
-    i.onclick = reRenderFilter;
+    i.onclick = (e) => {
+        const langBar = e.target.closest(".langSet__item");
+        const value = langBar.getAttribute(`data-langset`);
+        document.documentElement.setAttribute(`lang`, value);
+        reRenderFilterContent();
+        setLanguage(value);
+    };
 }
 
 //
-function reRenderFilter(e) {
-    const langBar = e.target.closest(".langSet__item");
-    const value = langBar.getAttribute(`data-langset`);
-    document.documentElement.setAttribute(`lang`, value);
-
+function reRenderFilterContent() {
     lychiFilter._destroy();
-    lychiFilter._render(filterFormGiverList[filterFormGiverList.current](), {
-        cancelBtn: lh(`filter`, `cancelBtn`),
-        submitBtn: lh(`filter`, `submitBtn`),
-    });
-
-    setLanguage(value);
+    lychiFilter._render(
+        filterFormGiverList[filterFormGiverList.current].func(),
+        {
+            cancelBtn: lh(`filter`, `cancelBtn`),
+            submitBtn: lh(`filter`, `submitBtn`),
+        }
+    );
 }

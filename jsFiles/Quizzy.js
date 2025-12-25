@@ -54,25 +54,37 @@ Quizzy.prototype._addingCHild = function (op = {}) {
 };
 
 // {  QA
-//     question: `where is cat ?`,
-//     showAnswer: `me`,
+//     Q: `where is cat ?`,
+//     A: `me`,
 //     options: [`magne`, `magnus`, `slowie`, `me`, `lichi`],
 // },
 Quizzy.prototype._render = function (
-    QA,
-    userOptions = {
-        submitBtnHtml: ``,
-        deleteBtnHtml: ``,
-    },
-    mode = `checkbox`
+    input = {}
+
+    // userOptions = {
+    //     QA : [],
+    //     submitBtnHtml: ``,
+    //     deleteBtnHtml: ``,
+    //     mode : `checkbox`
+    // },
 ) {
-    if (!QA) return console.error(`Quizzy : QA list is invalid`);
-    if (![`radio`, `checkbox`].includes(mode))
+    userOptions = Object.assign(
+        {
+            QA: [],
+            submitBtnHtml: ``,
+            deleteBtnHtml: ``,
+            mode: `checkbox`,
+        },
+        input
+    );
+
+    if (!userOptions.QA) return console.error(`Quizzy : QA list is invalid`);
+    if (![`radio`, `checkbox`].includes(userOptions.mode))
         return console.error(`Quizzy : mode is invalid`);
 
-    this.QA = QA;
+    this.QA = userOptions.QA;
 
-    const blockQty = QA.length;
+    const blockQty = userOptions.QA.length;
     for (let i = 0; i < blockQty; i++) {
         this.currentBlockCheckedNodeList[i] = [];
         // this.output[i] = [];
@@ -96,7 +108,7 @@ Quizzy.prototype._render = function (
             attribute: {
                 class: this.classNames.quizQuestion,
             },
-            html: QA[i].question,
+            html: userOptions.QA[i].Q,
         });
 
         const correctAnswer = this._addingCHild({
@@ -123,9 +135,15 @@ Quizzy.prototype._render = function (
             addClickEvent: (e) => {
                 e.preventDefault();
                 const order = e.target.getAttribute(`data-order`);
+                if (this.currentBlockCheckedNodeList[order].length === 0)
+                    return;
                 let userA = this.userAnswerNodeList[order];
-                userA.innerText = userA.innerText.slice(0, -1);
                 this.currentBlockCheckedNodeList[order].pop().checked = false;
+                let reRenderText = ``;
+                for (let i of this.currentBlockCheckedNodeList[order]) {
+                    reRenderText += i.getAttribute(`value`);
+                }
+                userA.innerText = reRenderText;
             },
         });
         this.deleteNodeList.push(deleteBtn);
@@ -143,10 +161,10 @@ Quizzy.prototype._render = function (
                     const value = inputTag.getAttribute(`value`);
                     const order = e.target.getAttribute(`data-order`);
                     // get output
-                    if (mode === `checkbox`) {
+                    if (userOptions.mode === `checkbox`) {
                         // this.output[order].push(value);
                         this.userAnswerNodeList[order].innerText += value;
-                    } else if (mode === `radio`) {
+                    } else if (userOptions.mode === `radio`) {
                         // this.output[order] = value;
                         this.userAnswerNodeList[order].innerText = value;
                     }
@@ -156,7 +174,7 @@ Quizzy.prototype._render = function (
         });
         this.answerOptionsNodeList.push(answers);
         // add answer options
-        for (let m in QA[i].options) {
+        for (let m in userOptions.QA[i].options) {
             this._addingCHild({
                 parent: answers,
                 tagname: "label",
@@ -164,12 +182,12 @@ Quizzy.prototype._render = function (
                     "data-order": i,
                     class: this.classNames.quizAnswer,
                 },
-                html: `${QA[i].options[m]}
+                html: `${userOptions.QA[i].options[m]}
                 <input
                     hidden
-                    type="${mode}"
+                    type="${userOptions.mode}"
                     name="quiz-Q${i}"
-                    value="${QA[i].options[m]}"
+                    value="${userOptions.QA[i].options[m]}"
                 />`,
             });
         }
@@ -207,15 +225,12 @@ Quizzy.prototype._hiddenDelete = function () {
 Quizzy.prototype._showCorrectAnswer = function () {
     let score = 0;
     this.correctAnswerNodeList.forEach((value, index) => {
-        if (
-            this.userAnswerNodeList[index].innerText ===
-            this.QA[index].showAnswer
-        ) {
+        if (this.userAnswerNodeList[index].innerText === this.QA[index].A) {
             score++;
             this.userAnswerNodeList[index].classList.add(`correct`);
         } else {
             this.userAnswerNodeList[index].classList.add(`incorrect`);
-            value.innerText = this.QA[index].showAnswer;
+            value.innerText = this.QA[index].A;
             value.classList.add(`show`);
         }
     });

@@ -69,6 +69,35 @@ filterToQA.prototype._getVocab = function (database, condition) {
     // output  :  {hiragana: Array(66), kanji: Array(66), katakana: Array(15)}
 };
 
+filterToQA.prototype._grammarlyQA = function (database, condition) {
+    let output = [];
+    const grammarlyQaList = [];
+    const AOQ = Number(condition.AOQ[0]);
+    console.log(condition);
+    for (let i of condition.lesson) {
+        grammarlyQaList.push(...database[condition.level][i]);
+    }
+    let isLess = grammarlyQaList.length < AOQ;
+
+    console.log(grammarlyQaList.length, AOQ, this.allowLessVocab);
+
+    // check length
+    if (isLess && !this.allowLessVocab) {
+        return;
+    }
+    this.allowLessVocab = false;
+
+    if (isLess) {
+        output = grammarlyQaList ;
+        this._mixArray(output);
+    } else {
+        output = this._getRandomFromArray(grammarlyQaList,AOQ);
+    }
+    
+    return output;
+
+};
+
 filterToQA.prototype._vocabToQA = function (array, options) {
     const output = [];
     let l = options.other.length;
@@ -81,11 +110,12 @@ filterToQA.prototype._vocabToQA = function (array, options) {
         this._mixArray(otherAns);
 
         output.push({
-            question: value[options.question],
-            showAnswer: value[options.showAnswer],
+            Q: value[options.question],
+            A: value[options.showAnswer],
             options: otherAns,
         });
     });
+
     return output;
 };
 
@@ -185,13 +215,12 @@ filterToQA.prototype.getOutput = function (
     condition,
     dataType = `vocab`
 ) {
-    const vocab = this._getVocab(database, condition);
-    let lang = document.documentElement.getAttribute(`lang`);
-    // if out of vocab , get all  , no need  share handle
-
     if (dataType === `vocab`) {
+        //
+        const vocab = this._getVocab(database, condition);
+        let lang = document.documentElement.getAttribute(`lang`);
+        // if out of vocab , get all  , no need  share handle
         if (!vocab) return;
-
         if (vocab.totalQA < vocab.totalVocab) {
             let amounts = {};
             for (let [key, value] of Object.entries(vocab)) {
@@ -235,11 +264,13 @@ filterToQA.prototype.getOutput = function (
         });
 
         const output = [...kanjiList, ...hiraganaList, ...katakanaList];
+        
         this._mixArray(output);
 
         return output;
         //
-    } else if (dataType === `grammarly`) {
+    } else if (dataType === `grammar`) {
+        return this._grammarlyQA(database, condition);
     }
     //
 };

@@ -7,10 +7,10 @@ const i18n = {
             cancelBtn: `Chọn lại`,
             submitBtn: `Làm bài`,
         },
-        
+
         filterTabs: {
-            vocab: `tu vung`,
-            grammar: `ngu phap`,
+            vocab: `Từ vựng`,
+            grammar: `Ngữ pháp`,
         },
 
         quiz: {
@@ -31,7 +31,7 @@ const i18n = {
                     Nối các chữ cái hiragana & katakana thành từ vựng tương ứng
                 </p>
 
-                <p class="lychiExamNote__subtitle">Lưu ý</p>
+                <p class="lychiExamNote__subtitle">Lưu ý bài tập từ vựng</p>
                 <ul class="lychiExamNote__list">
                     <li class= "lychiExamNote__item" >
                         Với từ có nhiều cách đọc chỉ cần điền cách đọc gốc
@@ -236,8 +236,8 @@ const i18n = {
         },
 
         filterTabs: {
-            vocab: `vocabulary`,
-            grammar: `grammarly`,
+            vocab: `Vocabulary`,
+            grammar: `Grammarly`,
         },
 
         quiz: {
@@ -258,7 +258,7 @@ const i18n = {
                     Connect the letters hiragana & katakana to form the corresponding vocabulary words.
                 </p>
 
-                <p class="lychiExamNote__subtitle">Lưu ý</p>
+                <p class="lychiExamNote__subtitle">Note the vocabulary exercises</p>
                 <ul class="lychiExamNote__list">
                     <li class= "lychiExamNote__item" >
                         For words with multiple readings, only enter the original/basic reading
@@ -386,6 +386,13 @@ initLang();
 function setLanguage(lang) {
     localStorage.setItem("lang", lang);
 }
+
+// function setLanguageOnclick(e) {
+//     const langBar = e.target.closest(".langSet__item");
+//     const value = langBar.getAttribute(`data-langset`);
+//     document.documentElement.setAttribute(`lang`, value);
+//     setLanguage(value);
+// }
 
 // allowLessVocabModal
 

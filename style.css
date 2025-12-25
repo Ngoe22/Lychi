@@ -274,6 +274,7 @@ body {
     cursor: pointer;
     border-bottom: 2px solid transparent;
     font-size: 1.8rem;
+    font-weight: 600;
 }
 .filter-tab.active {
     border-color: var(--textColor);
