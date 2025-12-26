@@ -2430,8 +2430,8 @@ const vocabData = {
                 {
                     vi: "trà",
                     hv: "TRÀ",
-                    kanji: "お茶",
-                    hira: "おちゃ",
+                    kanji: "茶",
+                    hira: "ちゃ",
                     pureKanji: true,
                     kind: "noun",
                     en: "tea",
@@ -2457,8 +2457,8 @@ const vocabData = {
                 {
                     vi: "rượu, rượu sake",
                     hv: "TỬU",
-                    kanji: "お酒",
-                    hira: "おさけ",
+                    kanji: "酒",
+                    hira: "さけ",
                     pureKanji: true,
                     kind: "noun",
                     en: "alcohol, sake",
@@ -2733,7 +2733,7 @@ const vocabData = {
                     en: "eraser",
                 },
                 {
-                    vi: "tóc",
+                    vi: "giấy",
                     hv: "CHÍ",
                     kanji: "紙",
                     hira: "かみ",
@@ -2762,8 +2762,8 @@ const vocabData = {
                 {
                     vi: "tiền",
                     hv: "KIM",
-                    kanji: "お金",
-                    hira: "おかね",
+                    kanji: "金",
+                    hira: "かね",
                     pureKanji: true,
                     kind: "noun",
                     en: "money",
@@ -2816,8 +2816,8 @@ const vocabData = {
                 },
                 {
                     vi: "quà lưu niệm",
-                    kanji: "お土産",
-                    hira: "おみやげ",
+                    kanji: "土産",
+                    hira: "みやげ",
                     pureKanji: true,
                     kind: "noun",
                     en: "souvenir",
