@@ -3059,7 +3059,7 @@ const vocabData = {
                 {
                     vi: "Tốt bụng",
                     hv: "THÂN THIẾT",
-                    kanji: "親切(な)",
+                    kanji: "親切",
                     hira: "しんせつ",
                     pureKanji: false,
                     kind: "adj-na",
@@ -3078,7 +3078,7 @@ const vocabData = {
                     vi: "Rảnh rỗi",
                     hv: "HẠ",
                     kanji: "暇",
-                    hira: "ひま(na)",
+                    hira: "ひま",
                     pureKanji: false,
                     kind: "adj-na",
                     en: "Free time",
@@ -3096,7 +3096,7 @@ const vocabData = {
                     vi: "Yên tĩnh",
                     hv: "TĨNH",
                     kanji: "静か",
-                    hira: "しずか(na)",
+                    hira: "しずか",
                     pureKanji: false,
                     kind: "adj-na",
                     en: "Quiet",
@@ -3502,7 +3502,7 @@ const vocabData = {
             katakana: [
                 {
                     vi: "Đẹp trai",
-                    kata: "ハンサム(な)",
+                    kata: "ハンサム",
                     kind: "adj-na",
                     en: "Handsome",
                 },
