@@ -3194,7 +3194,7 @@ const vocabData = {
                 {
                     vi: "Dễ",
                     hv: "DỊCH",
-                    kanji: "優しい",
+                    kanji: "易しい",
                     hira: "やさしい",
                     pureKanji: false,
                     kind: "adj-i",
