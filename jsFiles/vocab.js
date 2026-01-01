@@ -3192,7 +3192,7 @@ const vocabData = {
                     en: "Difficult",
                 },
                 {
-                    vi: "Dễ",
+                    vi: "Dễ dàng",
                     hv: "DỊCH",
                     kanji: "易しい",
                     hira: "やさしい",
