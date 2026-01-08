@@ -3782,7 +3782,7 @@ const vocabData = {
                 {
                     vi: "có (sở hữu)",
                     hv: "HỮU",
-                    kanji: "有る",
+                    kanji: "有ります",
                     hira: "あります",
                     kind: "verb",
                     en: "to have",
@@ -5747,7 +5747,7 @@ const vocabData = {
                 },
             ],
         },
-        // 
+        //
         lesson15: {
             kanji: [
                 {
