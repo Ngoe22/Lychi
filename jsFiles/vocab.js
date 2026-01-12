@@ -4235,8 +4235,8 @@ const vocabData = {
                 },
                 {
                     vi: "~ nhất (vị trí cao nhất)",
-                    hv: "一番",
-                    kanji: "NHẤT PHIÊN",
+                    hv: "NHẤT PHIÊN",
+                    kanji: "一番",
                     hira: "いちばん",
                     kind: "adverb",
                     en: "the most ~",
