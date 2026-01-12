@@ -4174,8 +4174,8 @@ const vocabData = {
                 {
                     vi: "giá thứ -, tầng thứ -",
                     hv: "ĐOẠN MỤC",
-                    kanji: "一段目",
-                    hira: "いちだんめ",
+                    kanji: "~段目",
+                    hira: "だんめ",
                     pureKanji: false,
                     kind: "noun",
                     en: "the first shelf/tier",
