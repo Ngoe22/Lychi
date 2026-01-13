@@ -4297,7 +4297,7 @@ const vocabData = {
                 },
                 {
                     vi: "Góc gia vị",
-                    kata: "スパイス",
+                    kata: "スパイスコーナー",
                     kind: "noun",
                     en: "spice corner",
                 },
