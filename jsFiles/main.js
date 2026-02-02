@@ -12,7 +12,7 @@ allowLessVocabModal.addFooterButton(
     "lychiModal-cancel",
     function () {
         allowLessVocabModal.close();
-    }
+    },
 );
 
 allowLessVocabModal.addFooterButton(
@@ -25,7 +25,7 @@ allowLessVocabModal.addFooterButton(
         let QA = testFilterToQA.getOutput(
             filterFormGiverList[filterFormGiverList.current].dataFrom,
             lychiFilter._getOutput(),
-            filterFormGiverList.current
+            filterFormGiverList.current,
         );
         if (!QA) return;
         filterWraper.classList.add(`hidden`);
@@ -33,7 +33,7 @@ allowLessVocabModal.addFooterButton(
             QA: QA,
             mode: filterFormGiverList[filterFormGiverList.current].QAmode,
         });
-    }
+    },
 );
 
 function renderAllowLessQaBtn() {
@@ -117,6 +117,16 @@ filterFormGiverList = {
                         `lesson13`,
                         `lesson14`,
                         `lesson15`,
+                        `lesson16`,
+                        `lesson17`,
+                        `lesson18`,
+                        `lesson19`,
+                        `lesson20`,
+                        `lesson21`,
+                        `lesson22`,
+                        `lesson23`,
+                        `lesson24`,
+                        `lesson25`,
                     ],
                     valueShow: [
                         `1`,
@@ -134,6 +144,16 @@ filterFormGiverList = {
                         `13`,
                         `14`,
                         `15`,
+                        `16`,
+                        `17`,
+                        `18`,
+                        `19`,
+                        `20`,
+                        `21`,
+                        `22`,
+                        `23`,
+                        `24`,
+                        `25`,
                     ],
                     required: true,
                 },
@@ -191,6 +211,16 @@ filterFormGiverList = {
                         `lesson13`,
                         `lesson14`,
                         `lesson15`,
+                        `lesson16`,
+                        `lesson17`,
+                        `lesson18`,
+                        `lesson19`,
+                        `lesson20`,
+                        `lesson21`,
+                        `lesson22`,
+                        `lesson23`,
+                        `lesson24`,
+                        `lesson25`,
                     ],
                     valueShow: [
                         `1`,
@@ -208,6 +238,16 @@ filterFormGiverList = {
                         `13`,
                         `14`,
                         `15`,
+                        `16`,
+                        `17`,
+                        `18`,
+                        `19`,
+                        `20`,
+                        `21`,
+                        `22`,
+                        `23`,
+                        `24`,
+                        `25`,
                     ],
                     required: true,
                 },
@@ -285,7 +325,7 @@ const lychiFilter = new Filterzy(
                 let QA = testFilterToQA.getOutput(
                     filterFormGiverList[filterFormGiverList.current].dataFrom,
                     filterOutput,
-                    filterFormGiverList.current
+                    filterFormGiverList.current,
                 );
                 // console.log(QA);
                 if (!QA) {
@@ -307,7 +347,7 @@ const lychiFilter = new Filterzy(
     {
         filterSubmitButtonHtml: lh(`filter`, `submitBtn`),
         filterCancelButtonHtml: lh(`filter`, `cancelBtn`),
-    }
+    },
 );
 
 // ====================================================
@@ -388,6 +428,6 @@ function reRenderFilterContent() {
         {
             cancelBtn: lh(`filter`, `cancelBtn`),
             submitBtn: lh(`filter`, `submitBtn`),
-        }
+        },
     );
 }

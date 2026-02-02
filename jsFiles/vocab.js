@@ -2762,8 +2762,8 @@ const vocabData = {
                 {
                     vi: "tiền",
                     hv: "KIM",
-                    kanji: "金",
-                    hira: "かね",
+                    kanji: "お金",
+                    hira: "おかね",
                     pureKanji: true,
                     kind: "noun",
                     en: "money",
@@ -4974,8 +4974,8 @@ const vocabData = {
                 {
                     vi: "lễ hội",
                     hv: "TẾ",
-                    kanji: "祭り",
-                    hira: "まつり",
+                    kanji: "お祭り",
+                    hira: "おまつり",
                     kind: "noun",
                     en: "festival",
                 },

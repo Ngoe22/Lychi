@@ -40,10 +40,7 @@ const i18n = {
                         Với từ có nhiều cách đọc chỉ cần điền cách đọc gốc
                         <span>ví dụ : phút(分) có đáp án là ふん</span>
                     </li>
-                     <li class= "lychiExamNote__item" >
-                        Tiền tố lịch sự (お) sẽ được lược bỏ .
-                        <span>ví dụ : tiền(金) có đáp án là かね</span>
-                    </li>
+
                     <li class= "lychiExamNote__item" >Động từ luôn ở thể ます</li>
                 </ul>
             `,
@@ -273,10 +270,6 @@ const i18n = {
                     <li class= "lychiExamNote__item" >
                         For words with multiple readings, only enter the original/basic reading
                         <span>Example: “minute” (分) → correct answer is ふん</span>
-                    </li>
-                    <li class= "lychiExamNote__item" >
-                        Honorific prefixes (お) will be omitted .
-                        <span>Example: Money (金) has the answer 'かね'</span>
                     </li>
                     <li class= "lychiExamNote__item" >Verbs must always be in the ます-form</li>
                 </ul>
