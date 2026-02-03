@@ -2457,8 +2457,8 @@ const vocabData = {
                 {
                     vi: "rượu, rượu sake",
                     hv: "TỬU",
-                    kanji: "酒",
-                    hira: "さけ",
+                    kanji: "お酒",
+                    hira: "おさけ",
                     pureKanji: true,
                     kind: "noun",
                     en: "alcohol, sake",
