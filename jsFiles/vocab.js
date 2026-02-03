@@ -5918,6 +5918,20 @@ const vocabData = {
                     kind: "noun",
                     en: "high school",
                 },
+                {
+                    kanji: "乗ります",
+                    hira: "のります",
+                    kind: "verb",
+                    en: "ride, get on",
+                    vi: "Đi, lên [tàu , phương tiện]",
+                },
+                {
+                    kanji: "降ります",
+                    hira: "おります",
+                    kind: "verb",
+                    en: "get off [train]",
+                    vi: "Xuống [tàu , phương tiện]",
+                },
             ],
             hiragana: [
                 {
@@ -5960,14 +5974,14 @@ const vocabData = {
                     hira: "のります",
                     kind: "verb",
                     en: "ride, get on",
-                    vi: "Đi, lên [tàu]",
+                    vi: "Đi, lên [tàu , phương tiện]",
                 },
                 {
                     kanji: "降ります",
                     hira: "おります",
                     kind: "verb",
                     en: "get off [train]",
-                    vi: "Xuống [tàu]",
+                    vi: "Xuống [tàu , phương tiện]",
                 },
                 {
                     kanji: "乗り換えます",
