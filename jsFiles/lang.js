@@ -1,5 +1,8 @@
 const i18n = {
     vi: {
+        askAi: {
+            btn: `Tìm hiểu từ vựng`,
+        },
         filter: {
             lesson: "Bài học",
             letter: "Kiểu chữ",
@@ -231,6 +234,9 @@ const i18n = {
         },
     },
     en: {
+        askAi: {
+            btn: `Learn more `,
+        },
         filter: {
             lesson: "Lesson range",
             letter: "Character type",

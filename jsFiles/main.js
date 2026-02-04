@@ -270,7 +270,7 @@ filterFormGiverList = {
 // --------------------
 const filterWraper = document.querySelector(`.filter--wraper`);
 const filterTabs = document.querySelector(`.filter-tabs`);
-filterTabList = [];
+let filterTabList = [];
 function filterTabListClearActive() {
     for (let i of filterTabList) {
         i.classList.remove(`active`);
@@ -362,6 +362,8 @@ const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
         behavior: "smooth",
         block: "start",
     });
+
+    showAskAi();
 });
 
 // =================================================

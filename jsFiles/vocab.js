@@ -5651,14 +5651,7 @@ const vocabData = {
                     kind: "verb",
                     en: "to turn on",
                 },
-                {
-                    vi: "Chậm, thong thả, thoải mái",
-                    hv: "HOÃN",
-                    kanji: "緩り",
-                    hira: "ゆっくり",
-                    kind: "adverb",
-                    en: "slowly, leisurely",
-                },
+
                 {
                     vi: "Ngay, lập tức",
                     hv: "TRỰC",
@@ -5693,6 +5686,13 @@ const vocabData = {
                 },
             ],
             hiragana: [
+                {
+                    vi: "Chậm, thong thả, thoải mái",
+                    hv: "HOÃN",
+                    hira: "ゆっくり",
+                    kind: "adverb",
+                    en: "slowly, leisurely",
+                },
                 {
                     vi: "Gửi anh tiền này",
                     hv: "NGUYỆN",
