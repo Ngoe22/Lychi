@@ -3667,7 +3667,7 @@ const vocabData = {
                     kanji: "主人",
                     hira: "しゅじん",
                     pureKanji: true,
-                    kind: "noun",   
+                    kind: "noun",
                     en: "husband",
                 },
                 {
@@ -3683,7 +3683,7 @@ const vocabData = {
                     vi: "vợ (nói về vợ mình)",
                     hv: "THÊ",
                     kanji: "妻",
-                    hira: "つま/かない",
+                    hira: "つま",
                     pureKanji: true,
                     kind: "noun",
                     en: "wife",
