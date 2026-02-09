@@ -4,8 +4,6 @@ function vocabLearnMoreRender() {
     const urlPort1 = lh(`queryMazi`, `urlPort1`);
     const urlPort2 = lh(`queryMazi`, `urlPort2`);
 
-
-
     quizBlocks.forEach((element) => {
         const word = element.querySelector(`.quizzy-correctAnswer`).textContent;
 
