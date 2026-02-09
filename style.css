@@ -920,3 +920,15 @@ ul.bullet-points {
     font-weight: 800;
     cursor: pointer;
 }
+
+.ai-ask {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: var(--textColor);
+    background-color: rgb(97, 182, 97);
+    box-shadow: var(--btn-check-shadow);
+    border-radius: 5px;
+}
