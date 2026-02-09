@@ -7,11 +7,9 @@ function vocabLearnMoreRender() {
     quizBlocks.forEach((element) => {
         const word = element.querySelector(`.quizzy-correctAnswer`).textContent;
 
-        // https://mazii.net/en-US/search/word/jaen/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB
-
         element.insertAdjacentHTML(
             `afterbegin`,
-            `<a class="ask-mazi"  href="https://mazii.net/vi-VN/search/word/javi/${word}" target="_blank"  >${text}</a>`,
+            `<a class="ask-mazi"  href="https://mazii.net/${urlPort1}/search/word/${urlPort2}/${word}" target="_blank"  >${text}</a>`,
         );
     });
 }
