@@ -1,7 +1,9 @@
 const i18n = {
     vi: {
-        askAi: {
+        queryMazi: {
             btn: `Tìm hiểu từ vựng`,
+            urlPort1: `vi-VN`,
+            urlPort2: `javi`,
         },
         filter: {
             lesson: "Bài học",
@@ -234,8 +236,10 @@ const i18n = {
         },
     },
     en: {
-        askAi: {
+        queryMazi: {
             btn: `Learn more `,
+            urlPort1: `en-US`,
+            urlPort2: `jaen`,
         },
         filter: {
             lesson: "Lesson range",

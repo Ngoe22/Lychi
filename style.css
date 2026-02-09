@@ -921,7 +921,8 @@ ul.bullet-points {
     cursor: pointer;
 }
 
-.ai-ask {
+.ask-mazi {
+    display: block;
     margin-left: auto;
     cursor: pointer;
     padding: 10px;

@@ -363,7 +363,7 @@ const lychiQuiz = new Quizzy(`#quizBoard`, function (output) {
         block: "start",
     });
 
-    showAskAi();
+    vocabLearnMoreRender();
 });
 
 // =================================================
