@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.textbox {
+    background-color: rgba(255, 0, 0, 0.315);
+    height: 40px;
+    min-width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 3px;
+}
+.keyboard-letter {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, 0.324);
+    color: white;
+    cursor: pointer;
+}

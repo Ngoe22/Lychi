@@ -154,3 +154,4 @@ const HIRAGANA = [
     "ゅ",
     "ょ",
 ];
+

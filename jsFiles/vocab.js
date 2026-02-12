@@ -6614,7 +6614,7 @@ const vocabData = {
                     vi: "Vứt",
                 },
                 {
-                    kanji: "変えます",
+                    kanji: "換えます",
                     hira: "かえます",
                     kind: "verb",
                     en: "change, exchange",
