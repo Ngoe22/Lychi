@@ -6935,23 +6935,22 @@ const vocabData = {
                     en: "impossible, excessive",
                     vi: "Quá sức, không thể",
                 },
-            ],
-            hiragana: [
                 {
-                    kanji: "おかげさまで",
+                    kanji: "お陰様で",
                     hira: "おかげさまで",
                     kind: "expression",
                     en: "Thank you (used when expressing gratitude for help)",
                     vi: "Cám ơn (khi nhận được sự giúp đỡ của ai đó)",
                 },
                 {
-                    kanji: "体にいい",
+                    kanji: "体に良い",
                     hira: "からだにいい",
                     kind: "expression",
                     en: "good for health",
                     vi: "Tốt cho sức khỏe",
                 },
             ],
+            hiragana: [],
             katakana: [
                 {
                     kata: "パチンコ",
